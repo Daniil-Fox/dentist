@@ -1,0 +1,28 @@
+.cta {
+  padding: 40px 0;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__form {
+    .form__input {
+      height: 92px;
+    }
+    .form__area {
+      height: 180px;
+    }
+  }
+
+  &__image {
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

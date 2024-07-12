@@ -1,0 +1,17 @@
+:root {
+  // base
+  --font-family: "Atyp Display", sans-serif;
+  --second-family: "Atyp Variable", sans-serif;
+  --third-family: "Raleway", sans-serif;
+  --font3: "Unbounded", sans-serif;
+  --font4: "Manrope", sans-serif;
+  --content-width: 1320px;
+  --container-offset: 20px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --seraya-obvodka: #eaeaea;
+  --text-color: #444;
+  --accent: #2f7af6;
+}

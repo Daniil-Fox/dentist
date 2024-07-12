@@ -1,0 +1,17 @@
+.nav {
+  padding: 2rem 0;
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--text-color);
+
+    display: flex;
+    align-items: center;
+  }
+}

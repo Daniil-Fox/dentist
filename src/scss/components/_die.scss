@@ -1,0 +1,37 @@
+.die {
+  margin: 20px 0;
+  &__container {
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__icon {
+    width: 19px;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__val {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--text-color);
+  }
+}

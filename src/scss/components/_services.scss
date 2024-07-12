@@ -1,0 +1,62 @@
+.services {
+  padding: 40px 0;
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 20px;
+
+    margin-bottom: 30px;
+  }
+
+  &__more {
+    text-align: center;
+  }
+
+  &__btn {
+    min-width: 334px;
+  }
+}
+
+.services-item {
+  position: relative;
+  background: linear-gradient(135deg, #e9f2fd 0%, #f9f1ee 100%);
+  border: 1px solid var(--seraya-obvodka);
+  border-radius: 20px;
+  padding: 25px;
+  padding-top: 106px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  &__icon {
+    height: 137px;
+
+    svg {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__name {
+    display: block;
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+    color: var(--text-color);
+  }
+
+  &__link {
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    top: 20px;
+    width: 53px;
+    height: 53px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

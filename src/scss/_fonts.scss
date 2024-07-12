@@ -1,0 +1,20 @@
+// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@include font-face("Atyp Display", "../fonts/AtypDisplay-Medium", 500, normal);
+@include font-face("Atyp Display", "../fonts/AtypDisplay-Regular", 400, normal);
+@include font-face(
+  "Atyp Variable",
+  "../fonts/AtypVariable-Regular",
+  400,
+  normal
+);
+
+@include font-face("Manrope", "../fonts/Manrope-Regular", 400, normal);
+@include font-face("Manrope", "../fonts/Manrope-Bold", 700, normal);
+@include font-face("Manrope", "../fonts/Manrope-Medium", 700, normal);
+
+@include font-face("Raleway", "../fonts/Raleway-Black", 900, normal);
+@include font-face("Raleway", "../fonts/Raleway-Bold", 700, normal);
+@include font-face("Raleway", "../fonts/Raleway-Medium", 500, normal);
+
+@include font-face("Unbounded", "../fonts/Unbounded-Medium", 500, normal);
+@include font-face("Unbounded", "../fonts/Unbounded-SemiBold", 600, normal);
