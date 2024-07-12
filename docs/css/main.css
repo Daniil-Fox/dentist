@@ -490,6 +490,10 @@ a {
 .die__icon svg {
   width: 100%;
 }
+.die__form {
+  border: 1px solid rgba(47, 122, 246, 0.5);
+  border-radius: 10px;
+}
 .die__val {
   font-weight: 400;
   font-size: 20px;
