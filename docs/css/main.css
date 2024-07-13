@@ -488,6 +488,14 @@ a {
   align-items: center;
   gap: 20px;
 }
+.header__btn {
+  height: 62px;
+}
+@media (max-width: 1200px) {
+  .header__btn {
+    height: 50px;
+  }
+}
 @media (max-width: 768px) {
   .header__btn {
     display: none;
