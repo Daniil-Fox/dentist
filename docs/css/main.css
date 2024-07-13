@@ -1275,7 +1275,7 @@ a {
 }
 @media (max-width: 1024px) {
   .team__item {
-    padding-top: 250px;
+    padding-top: 360px;
   }
 }
 @media (max-width: 768px) {
@@ -1322,7 +1322,7 @@ a {
 .team__image img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .team__info {
   padding: 20px;
