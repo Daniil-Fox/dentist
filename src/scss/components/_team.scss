@@ -10,6 +10,30 @@
     background-color: #fff;
     overflow: hidden;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include tablet {
+      padding-top: 300px;
+    }
+    @media (max-width: 1024px) {
+      padding-top: 250px;
+    }
+  }
+  &__control {
+    &--top {
+      @include small-tablet {
+        display: none;
+      }
+    }
+    &--bottom {
+      display: none;
+      @include small-tablet {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
   &__title {
     margin-bottom: 0;
@@ -41,6 +65,10 @@
     background: rgba(255, 255, 255, 0.8);
     text-align: center;
     border-radius: 20px;
+
+    @media (max-width: 1024px) {
+      padding: 20px 10px;
+    }
   }
 
   &__name {

@@ -1,16 +1,26 @@
 .footer {
   padding: 40px 0;
-
+  @include small-tablet {
+    padding: 20px 0;
+  }
   &__top {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-
+    flex-wrap: wrap;
+    gap: 20px 0;
     padding-bottom: 30px;
     border-bottom: 1px solid #444;
+
+    @include mobile {
+      padding-bottom: 10px;
+    }
   }
   &__bottom {
     padding-top: 20px;
+    @include mobile {
+      padding-top: 10px;
+    }
   }
 
   &__copy {
@@ -21,6 +31,14 @@
     font-size: 16px;
     line-height: 162%;
     color: #444;
+
+    @include small-tablet {
+      font-size: 12px;
+      line-height: 150%;
+    }
+    @include mobile {
+      font-size: 10px;
+    }
   }
   &__content {
     flex-shrink: 0;
@@ -34,6 +52,15 @@
     width: 270px;
     height: 56px;
     margin-bottom: 30px;
+    @include small-tablet {
+      width: 220px;
+      height: 48px;
+    }
+    @include mobile {
+      width: 157px;
+      height: 34px;
+      margin-bottom: 0;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -47,36 +74,87 @@
     font-size: 16px;
     line-height: 162%;
     color: var(--text-color);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__addr {
     width: 100%;
     max-width: 380px;
     flex-shrink: 0;
+
+    @include mobile {
+      width: 100%;
+      max-width: 48%;
+      flex-shrink: 1;
+    }
   }
 
   &__row {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
-
+    @include mobile {
+      gap: 10px;
+    }
     &:not(:last-child) {
       margin-bottom: 20px;
+
+      @include mobile {
+        margin-bottom: 6px;
+      }
     }
 
     a:hover {
       text-decoration: underline;
     }
   }
-
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    svg,
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    @include small-tablet {
+      width: 25px;
+      height: 25px;
+    }
+    @include mobile {
+      width: 17px;
+      height: 17px;
+    }
+  }
   &__val {
     font-family: var(--second-family);
     font-weight: 400;
     font-size: 16px;
     line-height: 162%;
     color: var(--text-color);
-  }
 
+    @include small-tablet {
+      font-size: 14px;
+    }
+    @include mobile {
+      font-size: 10px;
+      line-height: 120%;
+    }
+  }
+  &__icon {
+    width: 19px;
+    flex-shrink: 0;
+    svg {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 14px;
+    }
+  }
   &__capture {
     display: block;
     margin-bottom: 10px;
@@ -85,10 +163,23 @@
     font-size: 18px;
     line-height: 144%;
     color: var(--text-color);
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 10px;
+    }
   }
   &__soc {
     width: 100%;
     max-width: 280px;
+
+    @include mobile {
+      width: auto;
+      max-width: 100%;
+      flex-shrink: 1;
+    }
   }
   small > a {
     font-family: var(--second-family);
@@ -98,5 +189,12 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: var(--accent);
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+    @include mobile {
+      display: none;
+    }
   }
 }

@@ -1,5 +1,9 @@
 .die {
   margin: 20px 0;
+  position: relative;
+  @include small-tablet {
+    padding-top: 40px;
+  }
   &__container {
     padding: 20px;
     border-radius: 20px;
@@ -9,21 +13,49 @@
     display: flex;
     align-items: center;
     gap: 30px;
-  }
 
+    @include tablet {
+      gap: 20px;
+    }
+
+    @include small-tablet {
+      flex-direction: column-reverse;
+      gap: 10px;
+      padding: 10px;
+    }
+  }
+  &__addr {
+    flex-shrink: 0;
+
+    @include small-tablet {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
   &__row {
     display: flex;
     align-items: center;
     gap: 20px;
-
+    @include small-tablet {
+      gap: 10px;
+    }
     &:not(:last-child) {
       margin-bottom: 15px;
+      @include small-tablet {
+        margin-bottom: 0;
+      }
     }
   }
 
   &__icon {
     width: 19px;
-
+    flex-shrink: 0;
     svg {
       width: 100%;
     }
@@ -36,5 +68,9 @@
     font-weight: 400;
     font-size: 20px;
     color: var(--text-color);
+
+    @include tablet {
+      font-size: 16px;
+    }
   }
 }

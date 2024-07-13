@@ -16,5 +16,38 @@
       @include('partials/footer.html')
       <!-- @include('html/h1.html') пример include -->
     </div>
+
+    <script src="https://api-maps.yandex.ru/v3/?apikey=221cbec3-01c0-4b1a-8417-d7d65e719c35&lang=ru_RU"></script>
+    <script>
+      main();
+      async function main() {
+        await ymaps3.ready;
+        const {
+          YMap,
+          YMapDefaultSchemeLayer,
+          YMapDefaultFeaturesLayer,
+          YMapMarker,
+        } = ymaps3;
+        map = new YMap(
+          document.getElementById("map"),
+          {
+            location: {
+              center: [37.534415, 55.676478],
+              zoom: 15,
+            },
+            showScaleInCopyrights: true,
+          },
+          [new YMapDefaultSchemeLayer({}), new YMapDefaultFeaturesLayer({})]
+        );
+
+        const markerElement = document.createElement("img");
+        markerElement.className = "icon-marker";
+        markerElement.src = "/img/teath.png";
+        // markerElement.onclick = () => alert(markerProp.message);
+        map.addChild(
+          new YMapMarker({ coordinates: [37.534415, 55.676478] }, markerElement)
+        );
+      }
+    </script>
   </body>
 </html>

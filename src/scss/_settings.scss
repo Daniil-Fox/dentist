@@ -110,6 +110,10 @@ a {
   padding: 20px 30px;
   line-height: 1;
   background-color: var(--accent);
+
+  @include tablet {
+    padding: 18px 25px;
+  }
 }
 
 .desc {
@@ -118,6 +122,16 @@ a {
   font-weight: 400;
   font-size: 25px;
   color: var(--text-color);
+
+  @include tablet {
+    font-size: 20px;
+  }
+  @include small-tablet {
+    font-size: 16px;
+  }
+  @include mobile {
+    font-size: 14px;
+  }
 }
 .desc2 {
   margin: 0;
@@ -125,6 +139,13 @@ a {
   font-weight: 400;
   font-size: 20px;
   color: #444;
+
+  @include tablet {
+    font-size: 16px;
+  }
+  @include small-tablet {
+    font-size: 14px;
+  }
 }
 .capture {
   display: block;
@@ -132,6 +153,16 @@ a {
   font-weight: 500;
   font-size: 25px;
   color: var(--text-color);
+
+  @include tablet {
+    font-size: 22px;
+  }
+  @media (max-width: 850px) {
+    font-size: 18px;
+  }
+  @include mobile {
+    font-size: 16px;
+  }
 }
 .title2 {
   margin: 0;
@@ -140,6 +171,18 @@ a {
   font-weight: 500;
   font-size: 55px;
   color: var(--text-color);
+
+  @include tablet {
+    font-size: 40px;
+  }
+  @include small-tablet {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  @include mobile {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
 }
 
 .control {
@@ -156,5 +199,28 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    svg {
+      @include small-tablet {
+        width: 14px;
+        height: 23px;
+      }
+    }
+    @include tablet {
+      width: 65px;
+      height: 65px;
+    }
   }
+}
+.icon-marker {
+  // cursor: pointer;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+.ymaps3x0--marker {
+  width: 60px;
 }

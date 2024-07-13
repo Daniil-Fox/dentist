@@ -1,13 +1,36 @@
 .testi {
   padding: 40px 0;
-
+  @include small-tablet {
+    padding: 20px 0;
+  }
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
-  }
 
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+  &__control {
+    &--top {
+      @include small-tablet {
+        display: none;
+      }
+    }
+    &--bottom {
+      display: none;
+      @include small-tablet {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
   &__title {
     margin: 0;
   }
@@ -18,12 +41,18 @@
   border-radius: 20px 0;
   box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
   background: linear-gradient(135deg, #e9f2fd 0%, #f9f1ee 100%);
-
+  @include small-tablet {
+    padding: 20px;
+  }
   &__header {
     display: flex;
     align-items: center;
     gap: 19px;
     margin-bottom: 30px;
+
+    @include small-tablet {
+      margin-bottom: 10px;
+    }
   }
 
   &__img {
@@ -31,7 +60,7 @@
     width: 63px;
     border-radius: 100%;
     overflow: hidden;
-
+    flex-shrink: 0;
     img {
       width: 100%;
       height: 100%;
@@ -41,6 +70,10 @@
     margin-bottom: 30px;
     line-height: 150%;
     font-weight: 400;
+
+    @include small-tablet {
+      margin-bottom: 10px;
+    }
   }
 
   &__from {

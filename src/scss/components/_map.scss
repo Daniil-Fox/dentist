@@ -1,11 +1,21 @@
 .map {
   padding: 40px 0;
-
+  @include small-tablet {
+    padding: 20px 0;
+  }
   #map {
     border: 1px solid var(--seraya-obvodka);
     border-radius: 20px;
     box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
     background: #fff;
     height: 500px;
+    overflow: hidden;
+
+    @include small-tablet {
+      height: 350px;
+    }
+    @include mobile {
+      height: 220px;
+    }
   }
 }

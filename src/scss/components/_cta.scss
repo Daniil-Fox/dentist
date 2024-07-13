@@ -1,25 +1,51 @@
 .cta {
   padding: 40px 0;
+  @include small-tablet {
+    padding: 20px 0;
+  }
+  &__title {
+    align-self: flex-start;
+    text-align: left;
+  }
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    align-items: center;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   &__form {
     .form__input {
       height: 92px;
+
+      @include small-tablet {
+        height: 50px;
+      }
     }
     .form__area {
       height: 180px;
+      @include small-tablet {
+        height: 120px;
+      }
+      @include mobile {
+        height: 100px;
+      }
     }
   }
 
   &__image {
     border-radius: 20px;
     overflow: hidden;
-
+    @include small-tablet {
+      height: 320px;
+    }
+    @include mobile {
+      height: 220px;
+    }
     img {
       width: 100%;
       height: 100%;

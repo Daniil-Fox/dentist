@@ -9,6 +9,10 @@
 
     &:last-of-type {
       margin-bottom: 30px;
+
+      @include small-tablet {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -19,6 +23,18 @@
     border: 2px solid var(--seraya-obvodka);
     border-radius: 20px;
     padding: 20px;
+
+    @include tablet {
+      padding: 15px;
+      height: 65px;
+    }
+    @include small-tablet {
+      height: 50px;
+      border-radius: 10px;
+    }
+    @include mobile {
+      padding: 10px;
+    }
   }
 
   &__input,
@@ -28,6 +44,10 @@
     font-size: 18px;
     line-height: 1;
     color: var(--text-color);
+
+    @include tablet {
+      font-size: 16px;
+    }
   }
 
   &__area {
@@ -41,9 +61,24 @@
 
     overflow-y: auto;
     scrollbar-width: thin;
+
+    @include tablet {
+      padding: 15px;
+    }
+    @include small-tablet {
+      height: 120px;
+      font-size: 14px;
+      border-radius: 10px;
+    }
+    @include mobile {
+      height: 100px;
+      padding: 10px;
+      font-size: 12px;
+    }
   }
 
   &__btn {
-    min-width: 375px;
+    width: 100%;
+    max-width: 375px;
   }
 }

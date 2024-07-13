@@ -11,6 +11,17 @@ new Swiper(".team__slider", {
     prevEl: ".team-prev",
     nextEl: ".team-next",
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    560: {
+      slidesPerView: 2,
+    },
+    700: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 new Swiper(".testi__slider", {
@@ -21,4 +32,71 @@ new Swiper(".testi__slider", {
     prevEl: ".testi-prev",
     nextEl: ".testi-next",
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+  },
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const resizableSwiper = (
+    breakpoint,
+    swiperClass,
+    swiperSettings,
+    callback
+  ) => {
+    let swiper;
+
+    breakpoint = window.matchMedia(breakpoint);
+
+    const enableSwiper = function (className, settings) {
+      swiper = new Swiper(className, settings);
+
+      if (callback) {
+        callback(swiper);
+      }
+    };
+
+    const checker = function () {
+      if (breakpoint.matches) {
+        return enableSwiper(swiperClass, swiperSettings);
+      } else {
+        if (swiper !== undefined) swiper.destroy(true, true);
+        return;
+      }
+    };
+
+    breakpoint.addEventListener("change", checker);
+    checker();
+  };
+
+  // const someFunc = (instance) => {
+  //   if (instance) {
+  //     instance.on("slideChange", function (e) {
+  //       console.log("*** mySwiper.activeIndex", instance.activeIndex);
+  //     });
+  //   }
+  // };
+
+  resizableSwiper("(max-width: 1024px)", ".trust__slider", {
+    spaceBetween: 20,
+    slidesPerView: 2,
+    navigation: {
+      prevEl: ".trust-prev",
+      nextEl: ".trust-next",
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      600: {
+        slidesPerView: 2,
+      },
+    },
+  });
 });
