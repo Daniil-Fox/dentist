@@ -1,0 +1,25 @@
+.dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: auto;
+  z-index: 1;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  will-change: max-height;
+  &__item {
+    padding: 10px 20px;
+    background-color: var(--accent);
+    &:not(:last-child) {
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+}

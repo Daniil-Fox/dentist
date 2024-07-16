@@ -1,12 +1,35 @@
 // ваш код
 .header {
-  padding: 20px 0;
+  position: relative;
+  z-index: 100;
+
   &__container {
+    padding: 20px var(--container-offset);
+    background-color: #fff;
+    position: relative;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   &__nav {
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    background-color: #fff;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: inherit;
+      width: calc(100% + 1px);
+      height: calc(100% + 1px);
+      background: linear-gradient(135deg, #e9f2fd, #f9f1ee);
+    }
     @media (max-width: 1024px) {
       display: none;
     }

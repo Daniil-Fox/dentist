@@ -1,8 +1,8 @@
 import { Swiper } from "swiper";
 
-import { Navigation } from "swiper/modules";
+import { Navigation, Thumbs } from "swiper/modules";
 
-Swiper.use([Navigation]);
+Swiper.use([Navigation, Thumbs]);
 new Swiper(".team__slider", {
   slidesPerView: 3,
   spaceBetween: 20,
@@ -39,6 +39,23 @@ new Swiper(".testi__slider", {
     768: {
       slidesPerView: 2,
     },
+  },
+});
+
+const drThumbs = new Swiper(".dr-lic__thumbs", {
+  direction: "vertical",
+  slidesPerView: "auto",
+  spaceBetween: 20,
+});
+new Swiper(".dr-lic__slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  thumbs: {
+    swiper: drThumbs,
+  },
+  navigation: {
+    prevEl: ".lic-prev",
+    nextEl: ".lic-next",
   },
 });
 
@@ -95,6 +112,23 @@ window.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1,
       },
       600: {
+        slidesPerView: 2,
+      },
+    },
+  });
+  resizableSwiper("(max-width: 900px)", ".doctors-team__slider", {
+    spaceBetween: 20,
+    slidesPerView: 2,
+    navigation: {
+      prevEl: ".dt-prev",
+      nextEl: ".dt-next",
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      560: {
         slidesPerView: 2,
       },
     },

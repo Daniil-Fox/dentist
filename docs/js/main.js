@@ -9,10 +9,40 @@
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sliders.js */ "./src/js/components/sliders.js");
-/* harmony import */ var _components_rate_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/rate.js */ "./src/js/components/rate.js");
+/* harmony import */ var _components_dropdown_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/dropdown.js */ "./src/js/components/dropdown.js");
+/* harmony import */ var _components_sliders_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders.js */ "./src/js/components/sliders.js");
+/* harmony import */ var _components_rate_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/rate.js */ "./src/js/components/rate.js");
 
 
+
+
+/***/ }),
+
+/***/ "./src/js/components/dropdown.js":
+/*!***************************************!*\
+  !*** ./src/js/components/dropdown.js ***!
+  \***************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const dropdownItems = document.querySelectorAll(".nav__item--drop");
+dropdownItems.forEach(item => {
+  const body = item.querySelector(".dropdown");
+  if (window.matchMedia("(min-width: 769px)").matches) {
+    body.style.left = item.offsetLeft + "px";
+    item.addEventListener("mouseenter", e => {
+      body.style.maxHeight = body.scrollHeight + "px";
+    });
+    item.addEventListener("mouseleave", e => {
+      body.style.maxHeight = null;
+    });
+  } else {
+    item.addEventListener("click", e => {
+      let isActive = body.classList.toggle("active");
+      body.style.maxHeight = isActive ? body.scrollHeight + "px" : null;
+    });
+  }
+});
 
 /***/ }),
 
@@ -63,7 +93,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
 
 
-swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper.use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
+swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper.use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Thumbs]);
 new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".team__slider", {
   slidesPerView: 3,
   spaceBetween: 20,
@@ -97,6 +127,22 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".testi__slider", {
     768: {
       slidesPerView: 2
     }
+  }
+});
+const drThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".dr-lic__thumbs", {
+  direction: "vertical",
+  slidesPerView: "auto",
+  spaceBetween: 20
+});
+new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".dr-lic__slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  thumbs: {
+    swiper: drThumbs
+  },
+  navigation: {
+    prevEl: ".lic-prev",
+    nextEl: ".lic-next"
   }
 });
 window.addEventListener("DOMContentLoaded", () => {
@@ -141,6 +187,22 @@ window.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1
       },
       600: {
+        slidesPerView: 2
+      }
+    }
+  });
+  resizableSwiper("(max-width: 900px)", ".doctors-team__slider", {
+    spaceBetween: 20,
+    slidesPerView: 2,
+    navigation: {
+      prevEl: ".dt-prev",
+      nextEl: ".dt-next"
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1
+      },
+      560: {
         slidesPerView: 2
       }
     }
@@ -10591,6 +10653,19 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_components.js */ "./src/js/_components.js");
 
+const burgerBtn = document.querySelector(".header__burger");
+const menu = document.querySelector(".menu");
+const menuBody = menu.querySelector(".menu__body");
+burgerBtn.addEventListener("click", e => {
+  e.preventDefault();
+  menu.classList.toggle("active");
+});
+menuBody.addEventListener("click", e => {
+  e.stopPropagation();
+});
+menu.addEventListener("click", e => {
+  menu.classList.remove("active");
+});
 /******/ })()
 ;
 //# sourceMappingURL=main.js.map

@@ -1,0 +1,55 @@
+.doctors-team {
+  padding: 40px 0;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__control {
+    display: none;
+
+    &.control--top {
+      @media (max-width: 900px) {
+        display: flex;
+      }
+      @include small-tablet {
+        display: none;
+      }
+    }
+    &.control--bottom {
+      @include small-tablet {
+        display: flex;
+      }
+    }
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 900px) {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: start;
+      gap: 0;
+    }
+  }
+  &__title {
+    margin: 0;
+  }
+  &__header {
+    margin-bottom: 30px;
+  }
+  &__item {
+    box-sizing: border-box;
+    width: 32%;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+}

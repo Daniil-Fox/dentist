@@ -199,6 +199,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     svg {
       @include small-tablet {
         width: 14px;
@@ -208,6 +209,20 @@ a {
     @include tablet {
       width: 65px;
       height: 65px;
+    }
+  }
+
+  &--top {
+    @include small-tablet {
+      display: none;
+    }
+  }
+  &--bottom {
+    display: none;
+    @include small-tablet {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
     }
   }
 }
@@ -223,4 +238,38 @@ a {
 }
 .ymaps3x0--marker {
   width: 60px;
+}
+
+.d-list {
+  & > li {
+    display: flex;
+    align-items: flex-start;
+    // flex-wrap: wrap;
+    gap: 14px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 20px;
+
+    color: var(--text-color);
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 26px;
+      height: 27px;
+      flex-shrink: 0;
+      background-image: url("./../img/tt-icon.svg");
+      background-position: center bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    a {
+      color: var(--text-color);
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
 }

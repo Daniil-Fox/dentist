@@ -6,6 +6,8 @@
 
 // подключения компонентов страницы
 @import "./components/header";
+@import "./components/menu";
+@import "./components/dropdown";
 @import "./components/nav";
 @import "./components/hero";
 @import "./components/form";
@@ -22,3 +24,9 @@
 @import "./components/map";
 @import "./components/cta";
 @import "./components/footer";
+
+@import "./components/doctors";
+@import "./components/doctors-team";
+@import "./components/dr-main";
+@import "./components/dr-ed";
+@import "./components/dr-lic";
