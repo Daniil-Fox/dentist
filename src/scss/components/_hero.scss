@@ -6,7 +6,7 @@
   }
   &__container {
     padding: 40px;
-    box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
+    box-shadow: 0 0 20px rgba(156, 156, 156, 0.1);
     background: linear-gradient(135deg, #e9f2fd 0%, #f9f1ee 100%);
     border: 1px solid var(--seraya-obvodka);
     border-radius: 60px;
@@ -14,10 +14,13 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
-
     @media (max-width: 850px) {
       display: block;
       padding: 20px;
+      border-radius: 20px;
+    }
+    @media (max-width: 1440px) {
+      margin: 0 var(--container-offset);
     }
   }
 
@@ -27,21 +30,7 @@
 
     @media (max-width: 850px) {
       margin-bottom: 15px;
-    }
-  }
-
-  &__image {
-    grid-column: 5 span;
-    @media (max-width: 850px) {
-      height: 400px;
-    }
-    @include mobile {
-      height: 175px;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-position: top;
+      padding-right: 0;
     }
   }
 
@@ -76,11 +65,23 @@
   }
 
   &__image {
-    box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
+    grid-column: 5 span;
+    box-shadow: 0 0 20px rgba(156, 156, 156, 0.1);
     background: linear-gradient(225deg, #fff 0%, #f9ffff 100%);
     border-radius: 40px;
     overflow: hidden;
+    @media (max-width: 850px) {
+      height: 400px;
+    }
+    @include small-tablet {
+      border-radius: 20px;
+    }
+    @include mobile {
+      height: 175px;
+    }
+
     img {
+      object-position: top;
       width: 100%;
       height: 100%;
     }

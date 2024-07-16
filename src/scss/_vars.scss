@@ -6,7 +6,7 @@
   --font3: "Unbounded", sans-serif;
   --font4: "Manrope", sans-serif;
   --content-width: 1320px;
-  --container-offset: 10px;
+  --container-offset: 40px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
@@ -14,4 +14,8 @@
   --seraya-obvodka: #eaeaea;
   --text-color: #444;
   --accent: #2f7af6;
+
+  @media (max-width: 768px) {
+    --container-offset: 10px;
+  }
 }

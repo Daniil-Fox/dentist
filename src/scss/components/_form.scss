@@ -30,6 +30,7 @@
     }
     @include small-tablet {
       height: 50px;
+
       border-radius: 10px;
     }
     @include mobile {
@@ -47,6 +48,9 @@
 
     @include tablet {
       font-size: 16px;
+    }
+    @include small-tablet {
+      font-size: 12px;
     }
   }
 

@@ -40,6 +40,7 @@
   }
   &__icon {
     height: 137px;
+    aspect-ratio: 1 / 1;
     @include small-tablet {
       height: 100px;
     }

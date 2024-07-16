@@ -6,12 +6,12 @@
     <div class="site-container">
       @include('partials/header.html')
       <main class="main">
-        @include('partials/die.html') @include('partials/doctors-section.html')
-        @include('partials/doctors-team.html') @include('partials/testi.html')
-        @include('partials/map.html') @include('partials/cta.html')
+        <div class="grid-container container">
+          <div class="grid-left">@include('partials/map.html')</div>
+          <div class="grid-right">@include('partials/aside.html')</div>
+        </div>
       </main>
       @include('partials/footer.html')
-      <!-- @include('html/h1.html') пример include -->
     </div>
   </body>
 </html>

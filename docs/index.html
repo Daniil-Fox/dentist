@@ -472,8 +472,8 @@
     <h2 class="title2 services__title">Наши услуги</h2>
 
     <div class="services__items">
-      <div class="services__item services-item">
-        <a href="#" class="services-item__link">
+      <a href="#" class="services__item services-item">
+        <span class="services-item__link">
           <svg
             width="53"
             height="53"
@@ -494,7 +494,7 @@
               fill="white"
             />
           </svg>
-        </a>
+        </span>
         <div class="services-item__icon">
           <svg
             width="137"
@@ -515,9 +515,9 @@
         </div>
 
         <span class="services-item__name">Консультация<br />стоматолога</span>
-      </div>
-      <div class="services__item services-item">
-        <a href="#" class="services-item__link">
+      </a>
+      <a href="#" class="services__item services-item">
+        <span class="services-item__link">
           <svg
             width="53"
             height="53"
@@ -538,7 +538,7 @@
               fill="white"
             />
           </svg>
-        </a>
+        </span>
         <div class="services-item__icon">
           <svg
             width="136"
@@ -567,9 +567,9 @@
         </div>
 
         <span class="services-item__name">Лечение<br />зубов</span>
-      </div>
-      <div class="services__item services-item">
-        <a href="#" class="services-item__link">
+      </a>
+      <a class="services__item services-item">
+        <span class="services-item__link">
           <svg
             width="53"
             height="53"
@@ -590,7 +590,7 @@
               fill="white"
             />
           </svg>
-        </a>
+        </span>
         <div class="services-item__icon">
           <svg
             width="136"
@@ -619,9 +619,9 @@
         </div>
 
         <span class="services-item__name">Имплантация<br />зубов</span>
-      </div>
-      <div class="services__item services-item">
-        <a href="#" class="services-item__link">
+      </a>
+      <a href="#" class="services__item services-item">
+        <span class="services-item__link">
           <svg
             width="53"
             height="53"
@@ -642,7 +642,7 @@
               fill="white"
             />
           </svg>
-        </a>
+        </span>
         <div class="services-item__icon">
           <svg
             width="137"
@@ -718,10 +718,10 @@
         </div>
 
         <span class="services-item__name">Протезирование<br />зубов</span>
-      </div>
+      </a>
 
-      <div class="services__item services-item">
-        <a href="#" class="services-item__link">
+      <a href="#" class="services__item services-item">
+        <span class="services-item__link">
           <svg
             width="53"
             height="53"
@@ -742,7 +742,7 @@
               fill="white"
             />
           </svg>
-        </a>
+        </span>
         <div class="services-item__icon">
           <svg
             width="137"
@@ -763,9 +763,9 @@
         </div>
 
         <span class="services-item__name">Ортодонтия</span>
-      </div>
-      <div class="services__item services-item">
-        <a href="#" class="services-item__link">
+      </a>
+      <a href="#" class="services__item services-item">
+        <span class="services-item__link">
           <svg
             width="53"
             height="53"
@@ -786,7 +786,7 @@
               fill="white"
             />
           </svg>
-        </a>
+        </span>
         <div class="services-item__icon">
           <svg
             width="133"
@@ -811,9 +811,9 @@
         </div>
 
         <span class="services-item__name">Отбеливание<br />зубов</span>
-      </div>
-      <div class="services__item services-item">
-        <a href="#" class="services-item__link">
+      </a>
+      <a href="#" class="services__item services-item">
+        <span class="services-item__link">
           <svg
             width="53"
             height="53"
@@ -834,7 +834,7 @@
               fill="white"
             />
           </svg>
-        </a>
+        </span>
         <div class="services-item__icon">
           <svg
             width="139"
@@ -879,9 +879,9 @@
         </div>
 
         <span class="services-item__name">Гигиеническая<br />чистка</span>
-      </div>
-      <div class="services__item services-item">
-        <a href="#" class="services-item__link">
+      </a>
+      <a class="services__item services-item">
+        <span class="services-item__link">
           <svg
             width="53"
             height="53"
@@ -902,7 +902,7 @@
               fill="white"
             />
           </svg>
-        </a>
+        </span>
         <div class="services-item__icon">
           <svg
             width="136"
@@ -935,7 +935,7 @@
         </div>
 
         <span class="services-item__name">Диагностика в<br />стоматологии</span>
-      </div>
+      </a>
     </div>
 
     <div class="services__more">
@@ -1310,9 +1310,18 @@
         <section class="interview">
   <h2 class="visually-hidden">title</h2>
 
-  <div class="container">
-    <div class="interview__video">
-      <video src=""></video>
+  <div class="container interview__container">
+    <div
+      class="interview__video"
+      data-video-src="https://www.youtube.com/embed/_qcVtMmk9Vk?si=Bhb0BQ0vBtbAbljz"
+    >
+      <img src="./img/interview.png" alt="" />
+    </div>
+    <div
+      class="interview__video"
+      data-video-src="https://www.youtube.com/embed/c_jBr83WQA4?si=YtY_rnhYyLNZqqAV"
+    >
+      <img src="./img/interview.png" alt="" />
     </div>
   </div>
 </section>
@@ -1354,7 +1363,7 @@
 
     <div class="team__slider swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide team__item">
+        <a href="#" class="swiper-slide team__item">
           <div class="team__image">
             <picture>
               <source srcset="./img/team/01.webp" type="image/webp" />
@@ -1371,9 +1380,9 @@
               Главный врач. Стоматолог-<br />имплантолог, хирург
             </p>
           </div>
-        </div>
+        </a>
 
-        <div class="swiper-slide team__item">
+        <a href="#" class="swiper-slide team__item">
           <div class="team__image">
             <picture>
               <source srcset="./img/team/02-2x.webp" type="image/webp" />
@@ -1389,9 +1398,9 @@
               Стоматолог-терапевт, пародонтолог, врач 1-й категории
             </p>
           </div>
-        </div>
+        </a>
 
-        <div class="swiper-slide team__item">
+        <a href="#" class="swiper-slide team__item">
           <div class="team__image">
             <picture>
               <source srcset="./img/team/03.webp" type="image/webp" />
@@ -1406,9 +1415,9 @@
             </span>
             <p class="desc2 team__desc">Стоматолог-терапевт</p>
           </div>
-        </div>
+        </a>
 
-        <div class="swiper-slide team__item">
+        <a href="#" class="swiper-slide team__item">
           <div class="team__image">
             <picture>
               <source srcset="./img/team/04.webp" type="image/webp" />
@@ -1422,9 +1431,9 @@
             </span>
             <p class="desc2 team__desc">Стоматолог-терапевт</p>
           </div>
-        </div>
+        </a>
 
-        <div class="swiper-slide team__item">
+        <a href="#" class="swiper-slide team__item">
           <div class="team__image">
             <picture>
               <source srcset="./img/team/05.webp" type="image/webp" />
@@ -1438,7 +1447,7 @@
             </span>
             <p class="desc2 team__desc">Стоматолог-ортопед</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
 
@@ -1639,8 +1648,15 @@
 </section>
  <section class="map">
   <h2 class="visually-hidden">title</h2>
-  <div class="container">
-    <div id="map"></div>
+  <div class="container map__container">
+    <div id="map">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A31c4c8c0f713823f7f6de58412c8b470c52f02a229ce4c4ca874b3d80a13ac94&amp;source=constructor"
+        width="100%"
+        height="580"
+        frameborder="0"
+      ></iframe>
+    </div>
   </div>
 </section>
 
@@ -1695,6 +1711,38 @@
     </div>
   </div>
 </section>
+ <div class="modal modal-video">
+  <div class="modal__body modal-video__body">
+    <iframe
+      width=""
+      height=""
+      src=""
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+      class="modal__iframe"
+    ></iframe>
+
+    <div class="modal__close">
+      <svg
+        stroke-linejoin="round"
+        version="1.1"
+        id="Capa_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 490 490"
+        xml:space="preserve"
+      >
+        <polygon
+          points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490
+	489.292,457.678 277.331,245.004 489.292,32.337 "
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 
       </main>
       <footer class="footer">
@@ -1846,38 +1894,5 @@
 </footer>
 
     </div>
-
-    <script src="https://api-maps.yandex.ru/v3/?apikey=221cbec3-01c0-4b1a-8417-d7d65e719c35&lang=ru_RU"></script>
-    <script>
-      main();
-      async function main() {
-        await ymaps3.ready;
-        const {
-          YMap,
-          YMapDefaultSchemeLayer,
-          YMapDefaultFeaturesLayer,
-          YMapMarker,
-        } = ymaps3;
-        map = new YMap(
-          document.getElementById("map"),
-          {
-            location: {
-              center: [37.534415, 55.676478],
-              zoom: 15,
-            },
-            showScaleInCopyrights: true,
-          },
-          [new YMapDefaultSchemeLayer({}), new YMapDefaultFeaturesLayer({})]
-        );
-
-        const markerElement = document.createElement("img");
-        markerElement.className = "icon-marker";
-        markerElement.src = "/img/teath.png";
-        // markerElement.onclick = () => alert(markerProp.message);
-        map.addChild(
-          new YMapMarker({ coordinates: [37.534415, 55.676478] }, markerElement)
-        );
-      }
-    </script>
   </body>
 </html>

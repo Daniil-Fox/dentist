@@ -122,7 +122,7 @@ a {
   font-weight: 400;
   font-size: 25px;
   color: var(--text-color);
-
+  line-height: 1.44;
   @include tablet {
     font-size: 20px;
   }
@@ -139,7 +139,7 @@ a {
   font-weight: 400;
   font-size: 20px;
   color: #444;
-
+  line-height: 144%;
   @include tablet {
     font-size: 16px;
   }
@@ -272,4 +272,14 @@ a {
       text-decoration-skip-ink: none;
     }
   }
+}
+
+.grid-container {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.grid-left {
+  grid-column: 2 span;
 }
