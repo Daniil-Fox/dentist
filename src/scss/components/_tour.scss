@@ -1,0 +1,25 @@
+.tour {
+  padding: 40px 0;
+  @include small-tablet {
+    padding: 20px 0;
+  }
+  &__frame {
+    position: relative;
+    height: 482px;
+    border-radius: 20px;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
+    background: var(--seraya-obvodka);
+    overflow: hidden;
+    @include small-tablet {
+      height: 320px;
+      border-radius: 10px;
+    }
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

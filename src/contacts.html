@@ -6,10 +6,16 @@
     <div class="site-container">
       @include('partials/header.html')
       <main class="main">
+        @include('partials/die.html')
         <div class="grid-container container">
-          <div class="grid-left">@include('partials/map.html')</div>
+          <div class="grid-left">
+            @include('partials/contacts-hero.html')
+            @include('partials/map.html') @include('partials/nearest-sub.html')
+            @include('partials/how-to-get.html')
+          </div>
           <div class="grid-right">@include('partials/aside.html')</div>
         </div>
+        @include('partials/contacts-cta.html')
       </main>
       @include('partials/footer.html')
     </div>

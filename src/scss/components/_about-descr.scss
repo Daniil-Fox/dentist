@@ -1,0 +1,39 @@
+.about-descr {
+  padding: 40px 0;
+  @include small-tablet {
+    padding: 20px 0;
+  }
+  &__title {
+    margin-bottom: 35px;
+    font-family: var(--third-family);
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__desc {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include mobile {
+        margin-bottom: 10px;
+      }
+    }
+    span {
+      margin-top: 10px;
+      display: block;
+      font-weight: 600;
+    }
+  }
+  &__items {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

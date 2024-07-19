@@ -13,10 +13,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders.js */ "./src/js/components/sliders.js");
 /* harmony import */ var _components_rate_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/rate.js */ "./src/js/components/rate.js");
 /* harmony import */ var _components_interview_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/interview.js */ "./src/js/components/interview.js");
+/* harmony import */ var _components_aside_time_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/aside-time.js */ "./src/js/components/aside-time.js");
 
 
 
 
+
+
+/***/ }),
+
+/***/ "./src/js/components/aside-time.js":
+/*!*****************************************!*\
+  !*** ./src/js/components/aside-time.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const asideTimes = document.querySelectorAll(".aside__time .aside__item");
+const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const clearActive = () => {
+  asideTimes.forEach(item => item.classList.remove("active"));
+};
+const initTime = () => {
+  const date = new Date();
+  const day = DAYS[(date.getDay() + 1) % DAYS.length];
+  clearActive();
+  document.querySelector(`.aside__item[data-day="${day}"]`).classList.add("active");
+};
+initTime();
+setInterval(() => {
+  initTime();
+}, 60000);
 
 /***/ }),
 
@@ -55,30 +82,32 @@ dropdownItems.forEach(item => {
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-const interviewBlocks = document.querySelectorAll(".interview__video");
 const modalVideo = document.querySelector(".modal-video");
-const modalBody = modalVideo.querySelector(".modal__body");
-const modalClose = modalVideo.querySelector(".modal__close");
-const video = modalVideo.querySelector(".modal__iframe");
-interviewBlocks.forEach(block => {
-  const dataSrc = block.dataset.videoSrc;
-  block.addEventListener("click", e => {
-    video.src = dataSrc;
-    modalVideo.classList.add("active");
+if (modalVideo) {
+  const interviewBlocks = document.querySelectorAll(".interview__video");
+  const modalBody = modalVideo.querySelector(".modal__body");
+  const modalClose = modalVideo.querySelector(".modal__close");
+  const video = modalVideo.querySelector(".modal__iframe");
+  interviewBlocks.forEach(block => {
+    const dataSrc = block.dataset.videoSrc;
+    block.addEventListener("click", e => {
+      video.src = dataSrc;
+      modalVideo.classList.add("active");
+    });
   });
-});
-modalBody.addEventListener("click", e => {
-  e.preventDefault();
-  e.stopPropagation();
-});
-modalVideo.addEventListener("click", e => {
-  modalVideo.classList.remove("active");
-  video.src = "";
-});
-modalClose.addEventListener("click", e => {
-  modalVideo.classList.remove("active");
-  video.src = "";
-});
+  modalBody.addEventListener("click", e => {
+    e.preventDefault();
+    e.stopPropagation();
+  });
+  modalVideo.addEventListener("click", e => {
+    modalVideo.classList.remove("active");
+    video.src = "";
+  });
+  modalClose.addEventListener("click", e => {
+    modalVideo.classList.remove("active");
+    video.src = "";
+  });
+}
 
 /***/ }),
 
@@ -163,6 +192,48 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".testi__slider", {
     768: {
       slidesPerView: 2
     }
+  }
+});
+new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".about-lic__slider", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    568: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 3
+    }
+  }
+});
+new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".articles__slider", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  navigation: {
+    prevEl: ".articles-prev",
+    nextEl: ".articles-next"
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    568: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 3
+    }
+  }
+});
+new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".about-slider__slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    prevEl: ".about-slider__btn--prev",
+    nextEl: ".about-slider__btn--next"
   }
 });
 const drThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".dr-lic__thumbs", {

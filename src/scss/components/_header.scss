@@ -30,7 +30,7 @@
       height: calc(100% + 1px);
       background: linear-gradient(135deg, #e9f2fd, #f9f1ee);
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1150px) {
       display: none;
     }
   }
@@ -44,7 +44,7 @@
     border: 1px solid var(--accent);
     border-radius: 5px;
     position: relative;
-    @media (max-width: 1024px) {
+    @media (max-width: 1150px) {
       display: flex;
     }
     @include small-tablet {
@@ -111,7 +111,9 @@
   }
   &__btn {
     height: 62px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media (max-width: 1200px) {
       height: 50px;
     }

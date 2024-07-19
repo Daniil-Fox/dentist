@@ -1,6 +1,8 @@
 .team {
   padding: 40px 0;
-
+  @include small-tablet {
+    padding: 20px 0;
+  }
   &__item {
     box-sizing: border-box;
     position: relative;
@@ -74,6 +76,7 @@
     }
     @include mobile {
       height: 100px;
+      padding: 5px;
     }
   }
 

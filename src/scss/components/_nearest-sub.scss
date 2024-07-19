@@ -1,0 +1,11 @@
+.nearest-sub {
+  margin-bottom: 40px;
+  @include small-tablet {
+    margin-bottom: 20px;
+  }
+  &__name {
+    span {
+      color: var(--accent);
+    }
+  }
+}

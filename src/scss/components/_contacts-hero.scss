@@ -1,0 +1,55 @@
+.contacts-hero {
+  margin-bottom: 40px;
+  @include small-tablet {
+    margin-bottom: 20px;
+  }
+  &__container {
+    box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
+    background: linear-gradient(135deg, #e9f2fd 0%, #f9f1ee 100%);
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    gap: 20px;
+
+    @include small-tablet {
+      border-radius: 20px;
+      padding: 30px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 518px;
+
+    @include small-tablet {
+      max-width: 100%;
+    }
+  }
+  &__image {
+    border-radius: 0 30px;
+    overflow: hidden;
+    flex-basis: 367px;
+
+    @include small-tablet {
+      flex-basis: auto;
+      max-height: 350px;
+      margin: 0 auto;
+      width: 100%;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+
+      @include small-tablet {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

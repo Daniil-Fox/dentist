@@ -102,6 +102,7 @@ a {
 }
 
 .btn {
+  display: inline-block;
   font-weight: 500;
   font-size: 16px;
   color: #fff;
@@ -113,6 +114,13 @@ a {
 
   @include tablet {
     padding: 18px 25px;
+  }
+  @include small-tablet {
+    font-size: 14px;
+  }
+  @include mobile {
+    padding: 15px 10px;
+    border-radius: 5px;
   }
 }
 
@@ -135,25 +143,36 @@ a {
 }
 .desc2 {
   margin: 0;
-  font-family: var(--second-family);
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 20px;
-  color: #444;
-  line-height: 144%;
+  color: var(--text-color);
+  line-height: 135%;
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
   @include tablet {
     font-size: 16px;
   }
   @include small-tablet {
+    line-height: 144%;
     font-size: 14px;
   }
 }
 .capture {
+  margin: 0;
   display: block;
-  font-family: var(--font-family);
+  font-family: var(--second-family);
   font-weight: 500;
   font-size: 25px;
   color: var(--text-color);
-
+  &--accent {
+    color: var(--accent);
+  }
+  &--th {
+    font-family: var(--third-family);
+  }
   @include tablet {
     font-size: 22px;
   }
@@ -167,7 +186,7 @@ a {
 .title2 {
   margin: 0;
   margin-bottom: 30px;
-  font-family: var(--font3);
+  font-family: var(--third-family);
   font-weight: 500;
   font-size: 55px;
   color: var(--text-color);
@@ -209,6 +228,10 @@ a {
     @include tablet {
       width: 65px;
       height: 65px;
+    }
+    @include mobile {
+      width: 52px;
+      height: 52px;
     }
   }
 
@@ -264,6 +287,15 @@ a {
       background-position: center bottom;
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include small-tablet {
+        width: 22px;
+        height: 23px;
+      }
+      @include mobile {
+        width: 18px;
+        height: 19px;
+      }
     }
 
     a {
@@ -271,15 +303,51 @@ a {
       text-decoration: underline;
       text-decoration-skip-ink: none;
     }
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &--blue {
+    & > li {
+      font-weight: 400;
+      &::before {
+        background: none;
+        mask-image: url("./../img/tt-icon.svg");
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center bottom;
+        background-color: var(--accent);
+      }
+    }
   }
 }
 
 .grid-container {
-  padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 20px;
+  @media (max-width: 1024px) {
+    display: block;
+  }
+  .container {
+    padding: 0;
+  }
 }
 .grid-left {
-  grid-column: 2 span;
+  grid-column: 9 span;
+}
+.grid-right {
+  grid-column: 3 span;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.swiper-button-lock {
+  display: none;
 }

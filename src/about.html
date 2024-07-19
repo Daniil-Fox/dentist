@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        @include('partials/die.html')
+        <div class="grid-container container">
+          <div class="grid-left">
+            @include('partials/about-hero.html') @include('partials/tour.html')
+            @include('partials/about-descr.html')
+            @include('partials/about-methods.html')
+            @include('partials/about-equip.html')
+            @include('partials/about-family.html')
+            @include('partials/about-lic.html')
+            @include('partials/about-props.html')
+            @include('partials/about-slider.html')
+          </div>
+          <div class="grid-right">@include('partials/aside.html')</div>
+        </div>
+        @include('partials/map.html') @include('partials/contacts-cta.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

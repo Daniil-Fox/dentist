@@ -42,6 +42,52 @@ new Swiper(".testi__slider", {
   },
 });
 
+new Swiper(".about-lic__slider", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    568: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+new Swiper(".articles__slider", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  navigation: {
+    prevEl: ".articles-prev",
+    nextEl: ".articles-next",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    568: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+new Swiper(".about-slider__slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+
+  navigation: {
+    prevEl: ".about-slider__btn--prev",
+    nextEl: ".about-slider__btn--next",
+  },
+});
 const drThumbs = new Swiper(".dr-lic__thumbs", {
   direction: "vertical",
   slidesPerView: "auto",

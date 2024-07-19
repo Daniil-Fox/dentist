@@ -1,0 +1,61 @@
+.consult-steps {
+  padding: 40px 0;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    counter-reset: counter 0;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+  &__step {
+    counter-increment: counter 1;
+  }
+}
+
+.step {
+  padding: 28px;
+  border: 1px solid var(--seraya-obvodka);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e9f2fd 0%, #f9f1ee 100%);
+
+  @include mobile {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  &__header {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+
+    @include mobile {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    &::before {
+      content: counter(counter);
+      font-family: var(--second-family);
+      font-weight: 500;
+      font-size: 40px;
+      text-align: center;
+      color: var(--text-color);
+
+      @include small-tablet {
+        font-size: 26px;
+      }
+      @include mobile {
+        font-size: 22px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.about-methods {
+  padding: 40px 0;
+  @include small-tablet {
+    padding: 20px 0;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+  &__desc {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__extra {
+    padding-left: 10px;
+    border-left: 1px solid var(--accent);
+  }
+  &__body {
+    padding: 20px;
+    box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
+    background: #fff;
+    border: 1px solid var(--seraya-obvodka);
+    border-radius: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__img {
+    border: 1px solid var(--seraya-obvodka);
+    border-radius: 10px;
+
+    box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
+    background: linear-gradient(135deg, #e9f2fd 0%, #f9f1ee 100%);
+    overflow: hidden;
+    @include mobile {
+      width: 100%;
+      height: auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

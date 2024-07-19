@@ -1,0 +1,78 @@
+.sub {
+  &__title {
+    margin-bottom: 20px;
+    font-family: var(--third-family);
+    font-weight: 500;
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+  &__body {
+    padding: 20px;
+    border: 1px solid var(--seraya-obvodka);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
+    background: #fff;
+
+    @include small-tablet {
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+  &__info {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include small-tablet {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    flex-shrink: 0;
+    padding: 4px;
+    padding-top: 0;
+    @include mobile {
+      width: 17px;
+      height: 17px;
+      padding: 1px;
+      padding-top: 0;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &--yel {
+      background-color: #f6a21e;
+    }
+    &--red {
+      background-color: #e6232b;
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include small-tablet {
+        margin-bottom: 10px;
+        gap: 10px;
+      }
+    }
+  }
+  &__desc {
+    margin: 0;
+    font-family: var(--font-family);
+
+    span {
+      color: var(--accent);
+    }
+  }
+}

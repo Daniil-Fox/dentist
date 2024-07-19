@@ -329,8 +329,114 @@
 </header>
 
       <main class="main">
+        <section class="die">
+  <div class="container">
+    <div class="die__container">
+      <form action="post" class="die__form s-form">
+        <button class="btn-reset s-form__btn">
+          <img src="./img/search-icon.svg" alt="" />
+        </button>
+        <input
+          type="text"
+          placeholder="Поиск по сайту"
+          class="input-reset s-form__input"
+        />
+      </form>
+      <address class="die__addr">
+        <div class="die__row">
+          <div class="die__icon">
+            <svg
+              width="19"
+              height="26"
+              viewBox="0 0 19 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.5 0C4.25363 0 0 4.36556 0 9.75C0 11.8702 0.677271 13.8158 1.80302 15.4091C1.82321 15.4473 1.82638 15.4899 1.84933 15.5265L8.18267 25.2765C8.47638 25.7286 8.97117 26 9.5 26C10.0288 26 10.5236 25.7286 10.8173 25.2765L17.1507 15.5265C17.174 15.4899 17.1768 15.4473 17.197 15.4091C18.3227 13.8158 19 11.8702 19 9.75C19 4.36556 14.7464 0 9.5 0ZM9.5 13C7.75121 13 6.33333 11.5448 6.33333 9.75C6.33333 7.95519 7.75121 6.5 9.5 6.5C11.2488 6.5 12.6667 7.95519 12.6667 9.75C12.6667 11.5448 11.2488 13 9.5 13Z"
+                fill="#2F7AF6"
+              />
+            </svg>
+          </div>
+          <div class="die__val">Москва, ул. Гарибальди, 6</div>
+        </div>
+        <div class="die__row">
+          <div class="die__icon">
+            <svg
+              width="19"
+              height="19"
+              viewBox="0 0 19 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.9605 9.84325L13.3991 11.2511C13.6372 11.3886 13.7142 11.7009 13.5801 11.933C13.4421 12.1722 13.1441 12.2586 12.8991 12.1172L10.4192 10.6854C10.1653 10.8826 9.84637 11 9.5 11C8.67157 11 8 10.3284 8 9.5C8 8.84689 8.4174 8.29128 9 8.08536V3.50342C9 3.22538 9.23193 3 9.5 3C9.77614 3 10 3.2329 10 3.50342V8.08536C10.5826 8.29128 11 8.84689 11 9.5C11 9.6181 10.9863 9.73301 10.9605 9.84325ZM9.5 19C14.7467 19 19 14.7467 19 9.5C19 4.25329 14.7467 0 9.5 0C4.25329 0 0 4.25329 0 9.5C0 14.7467 4.25329 19 9.5 19Z"
+                fill="#2F7AF6"
+              />
+            </svg>
+          </div>
+          <div class="die__val">09:00 до 21:00</div>
+        </div>
+      </address>
+    </div>
+  </div>
+</section>
+
         <div class="grid-container container">
-          <div class="grid-left"><section class="map">
+          <div class="grid-left">
+            <section class="cta contacts-hero">
+  <div class="container">
+    <div class="contacts-hero__container">
+      <form action="#" class="form contacts-hero__form">
+        <h2 class="title2 cta__title">Контактная<br />информация</h2>
+        <label class="form__label">
+          <input
+            type="text"
+            name="Имя клиента: "
+            placeholder="Ваше имя"
+            class="form__input"
+          />
+        </label>
+        <label class="form__label">
+          <input
+            type="text"
+            name="Номер телефона: "
+            placeholder="Ваш номер телефона"
+            class="form__input"
+          />
+        </label>
+        <label class="form__label">
+          <textarea
+            name="Проблема: "
+            placeholder="Опишите вашу проблему"
+            class="form__area"
+          ></textarea>
+        </label>
+        <button class="btn btn-reset form__btn">Рассчитать стоимость</button>
+      </form>
+
+      <div class="contacts-hero__image">
+        <picture>
+          <source
+            srcset="./img/contacts/cta-2x.webp"
+            type="image/webp"
+            media="(min-width: 1440px)"
+          />
+          <source srcset="./img/contacts/cta.webp" type="image/webp" />
+          <img
+            src="./img/contacts/cta.jpg"
+            srcset="./img/contacts/cta-2x.jpg 2x"
+            alt=""
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <section class="map">
   <h2 class="visually-hidden">title</h2>
   <div class="container map__container">
     <div id="map">
@@ -343,7 +449,199 @@
     </div>
   </div>
 </section>
-</div>
+ <section class="nearest-sub sub">
+  <div class="container">
+    <div class="sub__title nearest-sub__title capture capture--accent">
+      Ближайшее метро
+    </div>
+    <div class="sub__body nearest-sub__body">
+      <div class="neares-sub__row sub__row">
+        <div class="nearest-sub__icon sub__icon sub__icon--yel">
+          <svg
+            width="15"
+            height="10"
+            viewBox="0 0 15 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.2896 8.15787L10.169 0.150423L7.53771 4.83209L4.9064 0.150423L1.78581 8.16043H0.88397V9.3641H5.5831V8.16043H4.88754L5.56423 6.17136L7.53771 9.45876L9.51119 6.17136L10.1879 8.16043H9.49233V9.3641H14.2103V8.16043L13.2896 8.15787Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <span class="nearest-sub__name desc2">
+          Новые Черёмушки <span>1,4 км</span>
+        </span>
+      </div>
+      <div class="neares-sub__row sub__row">
+        <div class="nearest-sub__icon sub__icon sub__icon--yel">
+          <svg
+            width="15"
+            height="10"
+            viewBox="0 0 15 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.2896 8.15787L10.169 0.150423L7.53771 4.83209L4.9064 0.150423L1.78581 8.16043H0.88397V9.3641H5.5831V8.16043H4.88754L5.56423 6.17136L7.53771 9.45876L9.51119 6.17136L10.1879 8.16043H9.49233V9.3641H14.2103V8.16043L13.2896 8.15787Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <span class="nearest-sub__name desc2">
+          Профсоюзная <span>1,8 км</span>
+        </span>
+      </div>
+      <div class="neares-sub__row sub__row">
+        <div class="nearest-sub__icon sub__icon sub__icon--red">
+          <svg
+            width="15"
+            height="10"
+            viewBox="0 0 15 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.2896 8.15787L10.169 0.150423L7.53771 4.83209L4.9064 0.150423L1.78581 8.16043H0.88397V9.3641H5.5831V8.16043H4.88754L5.56423 6.17136L7.53771 9.45876L9.51119 6.17136L10.1879 8.16043H9.49233V9.3641H14.2103V8.16043L13.2896 8.15787Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <span class="nearest-sub__name desc2"> Проспект Вернадского </span>
+      </div>
+      <div class="neares-sub__row sub__row">
+        <div class="nearest-sub__icon sub__icon sub__icon--red">
+          <svg
+            width="15"
+            height="10"
+            viewBox="0 0 15 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.2896 8.15787L10.169 0.150423L7.53771 4.83209L4.9064 0.150423L1.78581 8.16043H0.88397V9.3641H5.5831V8.16043H4.88754L5.56423 6.17136L7.53771 9.45876L9.51119 6.17136L10.1879 8.16043H9.49233V9.3641H14.2103V8.16043L13.2896 8.15787Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <span class="nearest-sub__name desc2">
+          Университет <span>1,8 км</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <section class="how-to-get sub">
+  <div class="container">
+    <div class="sub__title how-to-get__title capture capture--accent">
+      Как к нам добраться на общественном транспорте
+    </div>
+    <div class="sub__body how-to-get__body">
+      <div class="sub__info">
+        <div class="neares-sub__row sub__row">
+          <div class="how-to-get__icon sub__icon sub__icon--yel">
+            <svg
+              width="15"
+              height="10"
+              viewBox="0 0 15 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.2896 8.15787L10.169 0.150423L7.53771 4.83209L4.9064 0.150423L1.78581 8.16043H0.88397V9.3641H5.5831V8.16043H4.88754L5.56423 6.17136L7.53771 9.45876L9.51119 6.17136L10.1879 8.16043H9.49233V9.3641H14.2103V8.16043L13.2896 8.15787Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <span class="how-to-get__name desc2"> Новые Черёмушки </span>
+        </div>
+        <p class="sub__desc how-to-get__desc desc2">
+          С остановки на Профсоюзной улице
+          <span>автобус 1 или 113, маршрутка 550 м</span> — 4 остановки пешком
+          12-15 минут по улице Гарибальди в сторону улиц: Архитектора Власова,
+          Вавилова, Академика Пилюгина, Ленинского проспекта.
+        </p>
+      </div>
+
+      <div class="sub__info">
+        <div class="neares-sub__row sub__row">
+          <div class="how-to-get__icon sub__icon sub__icon--yel">
+            <svg
+              width="15"
+              height="10"
+              viewBox="0 0 15 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.2896 8.15787L10.169 0.150423L7.53771 4.83209L4.9064 0.150423L1.78581 8.16043H0.88397V9.3641H5.5831V8.16043H4.88754L5.56423 6.17136L7.53771 9.45876L9.51119 6.17136L10.1879 8.16043H9.49233V9.3641H14.2103V8.16043L13.2896 8.15787Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <span class="how-to-get__name desc2"> Профсоюзная </span>
+        </div>
+        <p class="sub__desc how-to-get__desc desc2">
+          С остановки, расположенной на Нахимовском проспекте автобус 153 или
+          маршрутка 438 м — 6 остановок.
+        </p>
+      </div>
+
+      <div class="sub__info">
+        <div class="neares-sub__row sub__row">
+          <div class="how-to-get__icon sub__icon sub__icon--red">
+            <svg
+              width="15"
+              height="10"
+              viewBox="0 0 15 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.2896 8.15787L10.169 0.150423L7.53771 4.83209L4.9064 0.150423L1.78581 8.16043H0.88397V9.3641H5.5831V8.16043H4.88754L5.56423 6.17136L7.53771 9.45876L9.51119 6.17136L10.1879 8.16043H9.49233V9.3641H14.2103V8.16043L13.2896 8.15787Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <span class="how-to-get__name desc2"> Проспект Вернадского </span>
+        </div>
+        <p class="sub__desc how-to-get__desc desc2">
+          Автобус 153 или маршрутка 438 м — 6 остановок. В 800 метрах от нас
+          расположена остановка «Ленинский проспект». До нее проще всего доехать
+          от станции метро «Университет».
+        </p>
+      </div>
+
+      <div class="sub__info">
+        <div class="neares-sub__row sub__row">
+          <div class="how-to-get__icon sub__icon sub__icon--red">
+            <svg
+              width="15"
+              height="10"
+              viewBox="0 0 15 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.2896 8.15787L10.169 0.150423L7.53771 4.83209L4.9064 0.150423L1.78581 8.16043H0.88397V9.3641H5.5831V8.16043H4.88754L5.56423 6.17136L7.53771 9.45876L9.51119 6.17136L10.1879 8.16043H9.49233V9.3641H14.2103V8.16043L13.2896 8.15787Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <span class="how-to-get__name desc2"> Университет </span>
+        </div>
+        <p class="sub__desc how-to-get__desc desc2">
+          С остановки, расположенной на Нахимовском проспекте автобус 153 или
+          маршрутка 438 м — 6 остановок.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+          </div>
           <div class="grid-right"><div class="aside">
   <div class="aside__block">
     <div class="aside__body">
@@ -368,9 +666,108 @@
       </div>
     </div>
   </div>
+
+  <div class="aside__block">
+    <div class="aside__body">
+      <div class="aside__info">
+        <p class="aside__value aside__desc">
+          Пожалуйста, если у вас есть пожелания или замечания по работе клиники
+          — сообщите об этом директору.
+        </p>
+        <button class="btn-reset btn aside__btn">Написать директору</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="aside__block">
+    <span class="btn-reset btn aside__tt">График работы</span>
+    <div class="aside__body">
+      <div class="aside__info aside__time">
+        <div class="aside__item active" data-day="Monday">
+          <span> Понедельник </span>
+          <span> 09:00–21:00 </span>
+        </div>
+        <div class="aside__item" data-day="Tuesday">
+          <span> Вторник </span>
+          <span> 09:00–21:00 </span>
+        </div>
+        <div class="aside__item" data-day="Wednesday">
+          <span> Среда </span>
+          <span> 09:00–21:00 </span>
+        </div>
+        <div class="aside__item" data-day="Thursday">
+          <span> Четверг </span>
+          <span> 09:00–21:00 </span>
+        </div>
+        <div class="aside__item" data-day="Friday">
+          <span> Пятница </span>
+          <span> 09:00–21:00 </span>
+        </div>
+        <div class="aside__item" data-day="Saturday">
+          <span> Суббота </span>
+          <span> 09:00–21:00 </span>
+        </div>
+        <div class="aside__item" data-day="Sunday">
+          <span> Воскресенье </span>
+          <span> 09:00–21:00 </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
         </div>
+        <div class="contacts-cta cta">
+  <div class="container">
+    <h2 class="title2 cta__title">Остались вопросы?<br />Свяжитесь с нами</h2>
+
+    <div class="cta__container contacts-cta__container">
+      <form action="#" class="form cta__form">
+        <label class="form__label">
+          <input
+            type="text"
+            name="Имя клиента: "
+            placeholder="Ваше имя"
+            class="form__input"
+          />
+        </label>
+        <label class="form__label">
+          <input
+            type="text"
+            name="Номер телефона: "
+            placeholder="Ваш номер телефона"
+            class="form__input"
+          />
+        </label>
+        <label class="form__label">
+          <textarea
+            name="Проблема: "
+            placeholder="Опишите вашу проблему"
+            class="form__area"
+          ></textarea>
+        </label>
+        <button class="btn btn-reset form__btn">Рассчитать стоимость</button>
+      </form>
+
+      <div class="cta__image">
+        <picture>
+          <source
+            srcset="./img/contacts/02-2x.webp"
+            type="image/webp"
+            media="(min-width: 1440px)"
+          />
+          <source srcset="./img/contacts/02.webp" type="image/webp" />
+          <img
+            src="./img/contacts/02.jpg"
+            srcset="./img/contacts/02-2x.jpg 2x"
+            alt=""
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+
       </main>
       <footer class="footer">
   <div class="container">

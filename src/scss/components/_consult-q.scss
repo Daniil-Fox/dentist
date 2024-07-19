@@ -1,0 +1,62 @@
+.consult-q {
+  padding: 40px 0;
+  @include small-tablet {
+    padding: 20px 0;
+  }
+  &__items {
+    counter-reset: counter;
+  }
+  &__item {
+    counter-increment: counter;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @include small-tablet {
+        margin-bottom: 20px;
+      }
+      @include mobile {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__capture {
+    margin-bottom: 20px;
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    @include small-tablet {
+      gap: 15px;
+    }
+    @include mobile {
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+    &::before {
+      content: counter(counter);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--second-family);
+      font-weight: 500;
+      font-size: 20px;
+      color: #fff;
+      background-color: var(--accent);
+      padding: 0 8px;
+      aspect-ratio: 1 / 1;
+      border-radius: 100%;
+      @include small-tablet {
+        font-size: 18px;
+      }
+      @include mobile {
+        font-size: 16px;
+        padding: 0 6px;
+      }
+    }
+  }
+}
