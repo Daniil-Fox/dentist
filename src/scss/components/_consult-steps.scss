@@ -58,4 +58,15 @@
       }
     }
   }
+
+  &--thin {
+    .step__header {
+      padding: 10px;
+      margin-bottom: 10px;
+      align-items: flex-start;
+    }
+    .step__header::before {
+      font-size: 25px;
+    }
+  }
 }

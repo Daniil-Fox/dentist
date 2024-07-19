@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        @include('partials/die.html')
+        <div class="grid-container container">
+          <div class="grid-left">
+            @include('partials/service-hero.html')
+            @include('partials/consult-steps-sec.html')
+            @include('partials/service-cost.html')
+            @include('partials/service-list.html')
+            @include('partials/service-doc.html') @include('partials/faq.html')
+          </div>
+          <div class="grid-right">@include('partials/aside-sec.html')</div>
+        </div>
+        @include('partials/testi.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

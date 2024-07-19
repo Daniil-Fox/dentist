@@ -70,7 +70,7 @@
     font-weight: 500;
     font-size: 25px;
     color: #fff;
-
+    padding: 20px;
     @media (max-width: 1300px) {
       font-size: 22px;
       margin-bottom: 15px;
@@ -99,6 +99,110 @@
     }
     @media (max-width: 1200px) {
       font-size: 14px;
+    }
+  }
+  &__ch {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__prof {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: var(--accent);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__btn {
+    width: auto;
+    margin: 0 auto;
+  }
+}
+.aside-links {
+  &__link {
+    font-weight: 400;
+    font-size: 18px;
+    color: #bdbdbd;
+  }
+  &__item {
+    margin-top: 15px;
+  }
+}
+.aside-item {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  &__icon {
+    cursor: pointer;
+    width: 8px;
+    height: 12px;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 18px;
+      color: #444;
+    }
+  }
+
+  &__body {
+    will-change: max-height;
+    transition: max-height 0.3s ease-in;
+    box-sizing: content-box;
+    overflow: hidden;
+    max-height: 0;
+  }
+}
+
+.aside-doc {
+  position: relative;
+  &__img {
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__name {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #444;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  &__link {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 38px;
+    height: 38px;
+
+    svg {
+      width: 100%;
+      height: 100%;
     }
   }
 }

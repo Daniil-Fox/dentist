@@ -14,11 +14,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_rate_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/rate.js */ "./src/js/components/rate.js");
 /* harmony import */ var _components_interview_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/interview.js */ "./src/js/components/interview.js");
 /* harmony import */ var _components_aside_time_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/aside-time.js */ "./src/js/components/aside-time.js");
+/* harmony import */ var _components_accordions_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/accordions.js */ "./src/js/components/accordions.js");
 
 
 
 
 
+
+
+/***/ }),
+
+/***/ "./src/js/components/accordions.js":
+/*!*****************************************!*\
+  !*** ./src/js/components/accordions.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const accordionItems = document.querySelectorAll("[data-acc-container]");
+accordionItems.forEach(item => {
+  const btn = item.querySelector("[data-acc-btn]");
+  const content = item.querySelector("[data-acc-content]");
+  if (item.classList.contains("active")) {
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    let isActive = content.classList.toggle("active");
+    content.style.maxHeight = isActive ? content.scrollHeight + "px" : null;
+  });
+});
 
 /***/ }),
 
