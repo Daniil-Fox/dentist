@@ -15,6 +15,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_interview_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/interview.js */ "./src/js/components/interview.js");
 /* harmony import */ var _components_aside_time_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/aside-time.js */ "./src/js/components/aside-time.js");
 /* harmony import */ var _components_accordions_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/accordions.js */ "./src/js/components/accordions.js");
+/* harmony import */ var _components_drop_price_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/drop-price.js */ "./src/js/components/drop-price.js");
+
 
 
 
@@ -69,6 +71,39 @@ initTime();
 setInterval(() => {
   initTime();
 }, 60000);
+
+/***/ }),
+
+/***/ "./src/js/components/drop-price.js":
+/*!*****************************************!*\
+  !*** ./src/js/components/drop-price.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const items = document.querySelectorAll(".prices__item");
+items.forEach(item => {
+  const btn = item.querySelector(".prices-item__left");
+  const btnAll = item.querySelector(".prices-item__btn--one");
+  const content = item.querySelectorAll(".prices-item__body");
+  content.forEach(c => {
+    const contentItems = c.querySelectorAll(".prices-pic");
+    const hideItems = [...contentItems].slice(3);
+    const btnAllItems = c.querySelector(".prices-item__btn--extra");
+    hideItems.forEach(el => el.classList.add("hide"));
+    btn?.addEventListener("click", e => {
+      c.classList.toggle("active");
+    });
+    btnAll?.addEventListener("click", e => {
+      c.classList.add("active");
+      hideItems.forEach(it => it.classList.toggle("visible"));
+    });
+    btnAllItems?.addEventListener("click", e => {
+      c.classList.add("active");
+      hideItems.forEach(it => it.classList.toggle("visible"));
+    });
+  });
+});
 
 /***/ }),
 

@@ -4,3 +4,4 @@ import "./components/rate.js";
 import "./components/interview.js";
 import "./components/aside-time.js";
 import "./components/accordions.js";
+import "./components/drop-price.js";
