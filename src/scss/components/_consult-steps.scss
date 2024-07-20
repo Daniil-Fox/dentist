@@ -1,6 +1,8 @@
 .consult-steps {
   padding: 40px 0;
-
+  @include small-tablet {
+    padding: 20px 0;
+  }
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -34,7 +36,7 @@
     border-radius: 10px;
     background-color: #fff;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 10px;
     padding: 10px 20px;
 
@@ -63,7 +65,10 @@
     .step__header {
       padding: 10px;
       margin-bottom: 10px;
-      align-items: flex-start;
+
+      @media (max-width: 900px) {
+        padding: 20px 10px;
+      }
     }
     .step__header::before {
       font-size: 25px;

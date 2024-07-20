@@ -1,8 +1,17 @@
 .service-list {
+  padding: 40px 0;
+  @include small-tablet {
+    padding: 20px 0;
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 13px 30px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
   }
   &__item {
     padding: 10px;
@@ -16,7 +25,10 @@
   &__icon {
     width: 35px;
     height: 35px;
-
+    @include small-tablet {
+      width: 25px;
+      height: 25px;
+    }
     svg {
       width: 100%;
       height: 100%;
@@ -26,5 +38,12 @@
     font-weight: 400;
     font-size: 20px;
     color: var(--text-color);
+    @include tablet {
+      font-size: 16px;
+    }
+    @include small-tablet {
+      line-height: 144%;
+      font-size: 14px;
+    }
   }
 }

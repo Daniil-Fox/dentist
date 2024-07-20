@@ -18,7 +18,7 @@ new Swiper(".team__slider", {
     560: {
       slidesPerView: 2,
     },
-    700: {
+    800: {
       slidesPerView: 3,
     },
   },
@@ -73,7 +73,7 @@ new Swiper(".articles__slider", {
     568: {
       slidesPerView: 2,
     },
-    768: {
+    800: {
       slidesPerView: 3,
     },
   },
@@ -105,6 +105,22 @@ new Swiper(".dr-lic__slider", {
   },
 });
 
+const baThumbs = new Swiper(".ba__thumbs", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+});
+
+const baSlider = new Swiper(".ba__slider", {
+  slidesPerView: 1,
+  loop: true,
+  navigation: {
+    prevEl: ".ba-prev",
+    nextEl: ".ba-next",
+  },
+  thumbs: {
+    swiper: baThumbs,
+  },
+});
 window.addEventListener("DOMContentLoaded", () => {
   const resizableSwiper = (
     breakpoint,

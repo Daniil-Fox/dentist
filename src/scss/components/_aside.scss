@@ -78,6 +78,17 @@
     @media (max-width: 1200px) {
       font-size: 18px;
     }
+
+    &--left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      svg {
+        width: 26px;
+        height: 28px;
+      }
+    }
   }
   &__item {
     font-weight: 400;

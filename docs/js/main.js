@@ -198,7 +198,7 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".team__slider", {
     560: {
       slidesPerView: 2
     },
-    700: {
+    800: {
       slidesPerView: 3
     }
   }
@@ -248,7 +248,7 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".articles__slider", {
     568: {
       slidesPerView: 2
     },
-    768: {
+    800: {
       slidesPerView: 3
     }
   }
@@ -275,6 +275,21 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".dr-lic__slider", {
   navigation: {
     prevEl: ".lic-prev",
     nextEl: ".lic-next"
+  }
+});
+const baThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".ba__thumbs", {
+  slidesPerView: 4,
+  spaceBetween: 20
+});
+const baSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".ba__slider", {
+  slidesPerView: 1,
+  loop: true,
+  navigation: {
+    prevEl: ".ba-prev",
+    nextEl: ".ba-next"
+  },
+  thumbs: {
+    swiper: baThumbs
   }
 });
 window.addEventListener("DOMContentLoaded", () => {

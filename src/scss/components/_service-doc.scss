@@ -1,9 +1,19 @@
 .service-doc {
   padding: 40px 0;
-
+  @include small-tablet {
+    padding: 20px 0;
+  }
   &__capture {
     font-size: 20px;
     margin-bottom: 10px;
+
+    @include tablet {
+      font-size: 16px;
+    }
+    @include small-tablet {
+      line-height: 144%;
+      font-size: 14px;
+    }
   }
 
   &__body {
@@ -14,6 +24,10 @@
     border-radius: 20px;
 
     margin-bottom: 30px;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
   }
   &__text {
     margin-bottom: 10px;

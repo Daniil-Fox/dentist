@@ -1,12 +1,18 @@
 .faq {
   padding: 40px 0;
-
+  @include small-tablet {
+    padding: 20px 0;
+  }
   &__body {
     box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
     background: #fff;
     border: 1px solid var(--seraya-obvodka);
     border-radius: 20px;
     padding: 30px;
+
+    @include small-tablet {
+      padding: 20px;
+    }
   }
   &__header {
     display: flex;
@@ -25,6 +31,11 @@
     height: 52px;
     flex-shrink: 0;
     position: relative;
+
+    @include small-tablet {
+      width: 30px;
+      height: 30px;
+    }
     svg {
       width: 100%;
       height: 100%;
@@ -40,6 +51,10 @@
       font-weight: 500;
       font-size: 30px;
       color: #fff;
+
+      @include small-tablet {
+        font-size: 18px;
+      }
     }
   }
   &__quest {
@@ -61,5 +76,13 @@
     border-radius: 20px;
     box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
     background: linear-gradient(225deg, #fff 0%, #f9ffff 100%);
+
+    @include small-tablet {
+      padding: 20px;
+      border-radius: 10px;
+    }
+    @include mobile {
+      padding: 10px;
+    }
   }
 }

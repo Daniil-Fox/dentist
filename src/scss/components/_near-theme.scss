@@ -52,12 +52,21 @@
       }
     }
   }
+  &__list--sec {
+    .near-theme__item {
+      &::before {
+        content: "";
+        border-radius: 0;
+        background-color: transparent;
+      }
+    }
+  }
   &__link {
     font-weight: 400;
     font-size: 20px;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: var(--accent);
+    color: var(--accent) !important;
 
     @include small-tablet {
       font-size: 16px;
