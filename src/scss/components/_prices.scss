@@ -89,6 +89,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 50px;
+
+  @include small-tablet {
+    gap: 20px;
+  }
   &.hide {
     display: none;
   }
