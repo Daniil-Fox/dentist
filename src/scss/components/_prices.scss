@@ -64,17 +64,7 @@
   &__wrap {
   }
   &__body {
-    // box-sizing: content-box;
-    // will-change: max-height;
-    // transition: max-height 0.3s;
-
-    // max-height: 0;
-    // overflow: hidden;
     display: none;
-
-    &.active {
-      display: block;
-    }
   }
 
   &__wrapper {
@@ -100,6 +90,14 @@
     }
     span {
       font-family: var(--font-family);
+    }
+  }
+  &.active {
+    .prices-item__body {
+      display: block;
+    }
+    .prices-item__arr {
+      transform: rotate(90deg);
     }
   }
 }

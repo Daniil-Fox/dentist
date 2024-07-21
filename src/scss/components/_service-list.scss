@@ -21,10 +21,17 @@
     display: flex;
     align-items: center;
     gap: 10px;
+
+    @include hover {
+      .service-list__icon {
+        transform: rotate(45deg);
+      }
+    }
   }
   &__icon {
     width: 35px;
     height: 35px;
+    transition: transform 0.3s ease-out;
     @include small-tablet {
       width: 25px;
       height: 25px;

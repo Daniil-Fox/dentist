@@ -76,6 +76,7 @@
   }
   &__link {
     position: absolute;
+    z-index: 5;
     left: 0;
     top: 0;
     width: 100%;
@@ -95,5 +96,11 @@
   }
   &__title {
     margin-bottom: 10px;
+  }
+
+  @include hover {
+    .services-item__link {
+      transform: rotate(45deg);
+    }
   }
 }

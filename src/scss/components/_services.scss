@@ -75,6 +75,7 @@
     top: 20px;
     width: 53px;
     height: 53px;
+    transition: transform 0.3s ease;
     @include small-tablet {
       width: 35px;
       height: 35px;
@@ -88,6 +89,12 @@
     svg {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  @include hover {
+    .services-item__link {
+      transform: rotate(45deg);
     }
   }
 }

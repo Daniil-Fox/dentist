@@ -151,10 +151,17 @@
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
+
+  &.active {
+    .aside-item__icon {
+      transform: rotate(90deg);
+    }
+  }
   &__icon {
     cursor: pointer;
     width: 8px;
     height: 12px;
+    transition: transform 0.3s ease-out;
   }
   &__header {
     display: flex;

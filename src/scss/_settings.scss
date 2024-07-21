@@ -111,7 +111,11 @@ a {
   padding: 20px 30px;
   line-height: 1;
   background-color: var(--accent);
+  transition: 0.3s ease-out;
 
+  @include hover {
+    background-color: rgb(77 161 255);
+  }
   @include tablet {
     padding: 18px 25px;
   }
@@ -121,6 +125,16 @@ a {
   @include mobile {
     padding: 15px 10px;
     border-radius: 5px;
+  }
+
+  &--white {
+    background-color: #fff;
+    color: var(--text-color);
+
+    @include hover {
+      background-color: #fff;
+      color: var(--accent);
+    }
   }
 }
 

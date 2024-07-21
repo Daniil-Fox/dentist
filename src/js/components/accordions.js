@@ -9,7 +9,7 @@ accordionItems.forEach((item) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
 
-    let isActive = content.classList.toggle("active");
+    let isActive = item.classList.toggle("active");
 
     content.style.maxHeight = isActive ? content.scrollHeight + "px" : null;
   });
