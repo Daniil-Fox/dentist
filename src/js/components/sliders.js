@@ -113,6 +113,7 @@ const baThumbs = new Swiper(".ba__thumbs", {
 const baSlider = new Swiper(".ba__slider", {
   slidesPerView: 1,
   loop: true,
+  spaceBetween: 20,
   navigation: {
     prevEl: ".ba-prev",
     nextEl: ".ba-next",

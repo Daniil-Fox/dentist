@@ -319,6 +319,7 @@ const baThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".ba__thumbs", {
 const baSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".ba__slider", {
   slidesPerView: 1,
   loop: true,
+  spaceBetween: 20,
   navigation: {
     prevEl: ".ba-prev",
     nextEl: ".ba-next"
