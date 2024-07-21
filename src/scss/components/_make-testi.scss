@@ -1,0 +1,69 @@
+.make-testi {
+  padding: 40px 0;
+  @include small-tablet {
+    padding: 20px 0;
+  }
+  &__capture {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    svg {
+      width: 32px;
+      height: 32px;
+
+      @include small-tablet {
+        width: 24px;
+        height: 24px;
+      }
+      @include mobile {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+  &__area {
+    display: block;
+    margin-bottom: 20px;
+    height: 190px;
+    width: 100%;
+    resize: none;
+
+    border: 1px solid var(--seraya-obvodka);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
+    background: linear-gradient(225deg, #fff 0%, #f9ffff 100%);
+
+    padding: 30px;
+    padding-left: 70px;
+
+    background-image: url("./../img/pen.svg");
+    background-size: 23px;
+    background-position: 30px 30px;
+    background-repeat: no-repeat;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--text-color);
+    &::placeholder {
+      color: var(--seraya-obvodka);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @include small-tablet {
+      padding: 20px;
+      padding-left: 60px;
+      font-size: 16px;
+      background-position: 20px 20px;
+    }
+    @include mobile {
+      padding-left: 40px;
+      background-size: 14px;
+      background-position: 20px 20px;
+      font-size: 14px;
+    }
+  }
+}
