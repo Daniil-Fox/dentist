@@ -45,7 +45,11 @@
     }
   }
   &__desc {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
+
+    @include mobile {
+      margin-bottom: 10px !important;
+    }
   }
   &__btn {
     width: 100%;

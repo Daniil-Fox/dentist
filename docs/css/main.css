@@ -2778,7 +2778,12 @@ a {
   }
 }
 .aside__desc {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
+}
+@media (max-width: 576px) {
+  .aside__desc {
+    margin-bottom: 10px !important;
+  }
 }
 .aside__btn {
   width: 100%;
