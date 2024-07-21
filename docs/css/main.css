@@ -1438,7 +1438,11 @@ a {
 
 .trust {
   padding: 40px 0;
-  padding-bottom: 0;
+}
+@media (max-width: 768px) {
+  .trust {
+    padding: 20px 0;
+  }
 }
 .trust__items {
   display: -ms-grid;
@@ -1446,7 +1450,7 @@ a {
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 @media (max-width: 1024px) {
   .trust__items {
@@ -1550,24 +1554,39 @@ a {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .interview__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
 .interview__video {
-  height: 550px;
   border: 1px solid var(--seraya-obvodka);
   border-radius: 20px;
   -webkit-box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
   box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
   background: var(--seraya-obvodka);
   overflow: hidden;
+  position: relative;
   cursor: pointer;
+  aspect-ratio: 16/9;
 }
 .interview__video img {
   width: 100%;
   height: 100%;
 }
-@media (max-width: 1200px) {
-  .interview__video {
-    height: 450px;
-  }
+.interview__video::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./../img/youtube.png");
+  background-size: 60px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .team {
@@ -2669,27 +2688,38 @@ a {
   opacity: 1;
 }
 .modal__body {
-  padding: 40px;
-  border-radius: 30px;
-  background-color: #fff;
-  width: 80%;
+  width: 75%;
   aspect-ratio: 16/9;
   position: relative;
+}
+@media (max-width: 768px) {
+  .modal__body {
+    width: 100%;
+    margin: 0 var(--container-offset);
+  }
 }
 .modal__body iframe {
   background-color: #000;
   display: block;
-  border-radius: 30px;
   width: 100%;
   height: 100%;
+  border-radius: 30px;
+}
+@media (max-width: 768px) {
+  .modal__body iframe {
+    border-radius: 10px;
+  }
 }
 .modal__close {
   position: absolute;
   right: 20px;
-  top: 20px;
-  width: 20px;
-  height: 20px;
+  top: -40px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
   cursor: pointer;
+  background-color: #fff;
+  border-radius: 100%;
 }
 .modal__close svg {
   width: 100%;

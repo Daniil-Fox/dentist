@@ -1,11 +1,13 @@
 .trust {
   padding: 40px 0;
-  padding-bottom: 0;
+  @include small-tablet {
+    padding: 20px 0;
+  }
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     @media (max-width: 1024px) {
       gap: 0;
       display: flex;
