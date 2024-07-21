@@ -854,6 +854,26 @@ a {
   font-weight: 400;
   font-size: 18px;
   color: var(--text-color);
+  display: inline-block;
+  position: relative;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(100% + 3px);
+  width: 10%;
+  height: 1px;
+  background-color: var(--accent);
+  opacity: 0;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+@media (any-hover: hover) {
+  .nav__link:hover::after {
+    width: 100%;
+    opacity: 1;
+  }
 }
 @media (max-width: 1300px) {
   .nav__link {
