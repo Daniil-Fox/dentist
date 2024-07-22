@@ -6037,7 +6037,7 @@ a {
 }
 @media (max-width: 1200px) {
   .service-cost__image {
-    height: 550px;
+    height: 55rem;
   }
 }
 @media (max-width: 1024px) {
