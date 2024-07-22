@@ -13,7 +13,7 @@
     @include for-big {
       gap: 2rem;
     }
-    @include small-tablet {
+    @include tablet {
       display: flex;
       flex-direction: column-reverse;
       grid-area: 10px;
@@ -45,8 +45,8 @@
     @include for-big {
       border-radius: 2rem;
     }
-    @include small-tablet {
-      height: 420px;
+    @include tablet {
+      aspect-ratio: 16 / 9;
     }
   }
 }

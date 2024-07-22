@@ -1525,7 +1525,7 @@ a {
     gap: 2rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1571,9 +1571,9 @@ a {
     border-radius: 2rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about__video {
-    height: 420px;
+    aspect-ratio: 16/9;
   }
 }
 
