@@ -4,6 +4,10 @@
   background: #fff;
   border: 1px solid var(--seraya-obvodka);
   border-radius: 20px;
+  @include for-big {
+    padding: 3rem;
+    border-radius: 2rem;
+  }
   @include small-tablet {
     padding: 20px;
     border-radius: 10px;
@@ -21,6 +25,10 @@
     background: linear-gradient(135deg, #e9f2fd 0%, #f9f1ee 100%);
     border: 1px solid var(--seraya-obvodka);
     border-radius: 20px;
+    @include for-big {
+      padding: 3rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       padding: 20px;
       border-radius: 10px;

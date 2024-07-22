@@ -1,5 +1,8 @@
 .consult-steps {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
@@ -9,7 +12,9 @@
     gap: 20px;
 
     counter-reset: counter 0;
-
+    @include for-big {
+      gap: 2rem;
+    }
     @media (max-width: 900px) {
       grid-template-columns: 1fr;
       gap: 10px;
@@ -26,7 +31,10 @@
   border: 1px solid var(--seraya-obvodka);
   border-radius: 20px;
   background: linear-gradient(135deg, #e9f2fd 0%, #f9f1ee 100%);
-
+  @include for-big {
+    padding: 2.8rem;
+    border-radius: 2rem;
+  }
   @include mobile {
     padding: 10px;
     border-radius: 10px;
@@ -39,7 +47,12 @@
     align-items: baseline;
     gap: 10px;
     padding: 10px 20px;
-
+    @include for-big {
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+      gap: 1rem;
+      padding: 1rem 2rem;
+    }
     @include mobile {
       padding: 10px;
       margin-bottom: 10px;
@@ -51,7 +64,9 @@
       font-size: 40px;
       text-align: center;
       color: var(--text-color);
-
+      @include for-big {
+        font-size: 4rem;
+      }
       @include small-tablet {
         font-size: 26px;
       }
@@ -65,13 +80,19 @@
     .step__header {
       padding: 10px;
       margin-bottom: 10px;
-
+      @include for-big {
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
       @media (max-width: 900px) {
         padding: 20px 10px;
       }
     }
     .step__header::before {
       font-size: 25px;
+      @include for-big {
+        font-size: 2.8rem;
+      }
     }
   }
 }

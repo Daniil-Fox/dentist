@@ -1,5 +1,8 @@
 .service-list {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
@@ -7,7 +10,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 13px 30px;
-
+    @include for-big {
+      gap: 1.3rem 3rem;
+    }
     @include mobile {
       grid-template-columns: 1fr;
       gap: 10px;
@@ -21,7 +26,11 @@
     display: flex;
     align-items: center;
     gap: 10px;
-
+    @include for-big {
+      padding: 1rem;
+      border-radius: 1rem;
+      gap: 1rem;
+    }
     @include hover {
       .service-list__icon {
         transform: rotate(45deg);
@@ -32,6 +41,10 @@
     width: 35px;
     height: 35px;
     transition: transform 0.3s ease-out;
+    @include for-big {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
     @include small-tablet {
       width: 25px;
       height: 25px;
@@ -45,6 +58,10 @@
     font-weight: 400;
     font-size: 20px;
     color: var(--text-color);
+
+    @include for-big {
+      font-size: 2rem;
+    }
     @include tablet {
       font-size: 16px;
     }

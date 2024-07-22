@@ -1,5 +1,8 @@
 .trust {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
@@ -8,6 +11,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding-bottom: 10px;
+    @include for-big {
+      padding-bottom: 1rem;
+    }
     @media (max-width: 1024px) {
       gap: 0;
       display: flex;
@@ -37,7 +43,11 @@
     padding: 30px;
 
     margin-bottom: 10px;
-
+    @include for-big {
+      border-radius: 2rem;
+      padding: 3rem;
+      margin-bottom: 1rem;
+    }
     @include tablet {
       padding: 20px;
     }
@@ -47,6 +57,9 @@
     display: flex;
     justify-content: center;
     height: 167px;
+    @include for-big {
+      height: 16.7rem;
+    }
     @include tablet {
       height: 120px;
     }
@@ -62,7 +75,10 @@
     background: #fff;
     border: 1px solid var(--seraya-obvodka);
     border-radius: 20px;
-
+    @include for-big {
+      padding: 3rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       padding: 20px;
     }

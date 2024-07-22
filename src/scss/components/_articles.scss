@@ -1,6 +1,8 @@
 .articles {
   padding: 40px 0;
-
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
@@ -9,6 +11,9 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+    @include for-big {
+      margin-bottom: 3rem;
+    }
     @include small-tablet {
       margin-bottom: 20px;
     }
@@ -17,6 +22,9 @@
     justify-content: center;
     &:not(:last-child) {
       margin-bottom: 20px;
+      @include for-big {
+        margin-bottom: 2rem;
+      }
     }
   }
   &__title {
@@ -25,7 +33,9 @@
 
   &__items {
     margin-bottom: 30px;
-
+    @include for-big {
+      margin-bottom: 3rem;
+    }
     @include small-tablet {
       margin-bottom: 20px;
     }
@@ -41,7 +51,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    @include for-big {
+      height: 7.6rem;
+      width: 36.3rem;
+    }
     @include small-tablet {
       height: 60px;
       width: 300px;
@@ -62,6 +75,11 @@
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    @include for-big {
+      height: 38rem;
+      margin-bottom: 2rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       height: 350px;
       margin-bottom: 10px;
@@ -90,12 +108,21 @@
     box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
+
+    @include for-big {
+      padding: 2rem;
+      padding-bottom: 5rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       padding-bottom: 20px;
     }
   }
   &__title {
     margin-bottom: 10px;
+    @include for-big {
+      margin-bottom: 1rem;
+    }
   }
 
   @include hover {

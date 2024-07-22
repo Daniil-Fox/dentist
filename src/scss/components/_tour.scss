@@ -1,5 +1,8 @@
 .tour {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
@@ -11,6 +14,10 @@
     box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
     background: var(--seraya-obvodka);
     overflow: hidden;
+    @include for-big {
+      height: 48.2rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       height: 320px;
       border-radius: 10px;

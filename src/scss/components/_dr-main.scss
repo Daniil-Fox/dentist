@@ -1,5 +1,8 @@
 .dr-main {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include mobile {
     padding-top: 0;
     padding-bottom: 20px;
@@ -8,7 +11,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-
+    @include for-big {
+      gap: 2rem;
+    }
     @media (max-width: 850px) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -28,7 +33,9 @@
     border: 1px solid var(--seraya-obvodka);
     border-radius: 20px;
     overflow: hidden;
-
+    @include for-big {
+      border-radius: 2rem;
+    }
     @include small-tablet {
       height: 450px;
       aspect-ratio: 1 / 1;
@@ -50,7 +57,10 @@
     border-radius: 20px;
 
     padding: 30px;
-
+    @include for-big {
+      padding: 3rem;
+      border-radius: 2rem;
+    }
     @media (max-width: 850px) {
       grid-column: 1 span;
       padding: 20px;
@@ -66,10 +76,18 @@
     margin-bottom: 30px;
     padding-bottom: 40px;
     border-bottom: 1px solid var(--accent);
+
+    @include for-big {
+      padding-bottom: 4rem;
+      margin-bottom: 3rem;
+    }
   }
   &__title {
     max-width: 80%;
     margin-bottom: 20px;
+    @include for-big {
+      margin-bottom: 2rem;
+    }
   }
 
   &__desc {
@@ -82,8 +100,15 @@
     font-weight: 500;
     font-size: 20px;
     color: var(--text-color);
+
+    @include for-big {
+      font-size: 2rem;
+    }
     &:not(:last-child) {
       margin-bottom: 30px;
+      @include for-big {
+        margin-bottom: 3rem;
+      }
     }
     & > span {
       color: var(--accent);
@@ -91,6 +116,9 @@
 
     &--capture {
       margin-bottom: 20px;
+      @include for-big {
+        margin-bottom: 2rem;
+      }
     }
   }
 }

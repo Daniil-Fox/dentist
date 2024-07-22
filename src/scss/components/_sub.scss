@@ -3,7 +3,9 @@
     margin-bottom: 20px;
     font-family: var(--third-family);
     font-weight: 500;
-
+    @include for-big {
+      margin-bottom: 2rem;
+    }
     @include mobile {
       margin-bottom: 10px;
     }
@@ -14,7 +16,10 @@
     border-radius: 20px;
     box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
     background: #fff;
-
+    @include for-big {
+      padding: 2rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       padding: 10px;
       border-radius: 10px;
@@ -23,7 +28,9 @@
   &__info {
     &:not(:last-child) {
       margin-bottom: 30px;
-
+      @include for-big {
+        margin-bottom: 3rem;
+      }
       @include small-tablet {
         margin-bottom: 10px;
       }
@@ -36,6 +43,11 @@
     flex-shrink: 0;
     padding: 4px;
     padding-top: 0;
+    @include for-big {
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0.4rem;
+    }
     @include mobile {
       width: 17px;
       height: 17px;
@@ -58,9 +70,15 @@
     display: flex;
     align-items: center;
     gap: 15px;
+
+    @include for-big {
+      gap: 1.5rem;
+    }
     &:not(:last-child) {
       margin-bottom: 20px;
-
+      @include for-big {
+        margin-bottom: 2rem;
+      }
       @include small-tablet {
         margin-bottom: 10px;
         gap: 10px;

@@ -1,11 +1,16 @@
 .about-lic {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
   &__title {
     margin-bottom: 30px;
-
+    @include for-big {
+      margin-bottom: 3rem;
+    }
     @include small-tablet {
       margin-bottom: 20px;
     }
@@ -19,7 +24,9 @@
     border-radius: 20px;
     overflow: hidden;
     height: auto;
-
+    @include for-big {
+      border-radius: 2rem;
+    }
     img {
       width: 100%;
       height: 100%;

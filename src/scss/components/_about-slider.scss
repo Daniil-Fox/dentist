@@ -1,6 +1,8 @@
 .about-slider {
   padding: 40px 0;
-
+  @include for-big {
+    padding: 4rem 0;
+  }
   &__slider {
     .swiper-slide {
       height: 500px;
@@ -9,6 +11,10 @@
       backdrop-filter: blur(7px);
       box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
       background: rgba(255, 255, 255, 0.8);
+      @include for-big {
+        height: 50rem;
+        border-radius: 1rem;
+      }
       @include small-tablet {
         height: 360px;
       }
@@ -32,7 +38,9 @@
     background: rgba(255, 255, 255, 0.6);
     &--prev {
       left: 30px;
-
+      @include for-big {
+        left: 3rem;
+      }
       @include small-tablet {
         left: 10px;
       }

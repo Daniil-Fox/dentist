@@ -1,5 +1,8 @@
 .testi-hero {
   padding-bottom: 40px;
+  @include for-big {
+    padding-bottom: 4rem;
+  }
   @include small-tablet {
     padding-bottom: 20px;
   }
@@ -15,7 +18,11 @@
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     gap: 20px;
-
+    @include for-big {
+      padding: 4rem;
+      border-radius: 6rem;
+      gap: 2rem;
+    }
     @media (max-width: 1024px) {
       border-radius: 40px;
       padding: 20px;
@@ -41,6 +48,9 @@
     background: linear-gradient(225deg, #fff 0%, #f9ffff 100%);
     border-radius: 40px;
     overflow: hidden;
+    @include for-big {
+      border-radius: 4rem;
+    }
     @media (max-width: 1024px) {
       grid-column: 5 span;
     }
@@ -71,7 +81,11 @@
     padding: 40px;
     font-family: var(--second-family);
     font-weight: 500;
-
+    @include for-big {
+      max-width: 68.5rem;
+      border-radius: 2rem;
+      padding: 4rem;
+    }
     @media (max-width: 1024px) {
       padding: 20px;
     }

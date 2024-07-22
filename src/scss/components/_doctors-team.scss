@@ -1,5 +1,11 @@
 .doctors-team {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
+  @include small-tablet {
+    padding: 20px 0;
+  }
   &__header {
     display: flex;
     align-items: center;
@@ -27,7 +33,9 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-
+    @include for-big {
+      gap: 2rem;
+    }
     @media (max-width: 1024px) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -44,6 +52,10 @@
   }
   &__header {
     margin-bottom: 30px;
+
+    @include for-big {
+      margin-bottom: 3rem;
+    }
   }
   &__item {
     box-sizing: border-box;

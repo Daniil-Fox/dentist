@@ -1,17 +1,26 @@
 .service-cost {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
   &__desc {
     &:nth-of-type(2) {
       margin-top: 30px;
+      @include for-big {
+        margin-top: 3rem;
+      }
       @include tablet {
         margin-top: 20px;
       }
     }
     &:not(:last-child) {
       margin-bottom: 30px;
+      @include for-big {
+        margin-bottom: 3rem;
+      }
       @include tablet {
         margin-bottom: 20px;
       }
@@ -29,16 +38,25 @@
     background: #fff;
     border: 1px solid var(--seraya-obvodka);
     border-radius: 20px;
-
+    @include for-big {
+      padding: 2rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       border-radius: 10px;
     }
   }
   &__capture {
     margin-bottom: 20px;
+    @include for-big {
+      margin-bottom: 2rem;
+    }
   }
   &__list {
     margin-bottom: 20px;
+    @include for-big {
+      margin-bottom: 2rem;
+    }
     & > li {
       font-weight: 400;
       a {
@@ -51,8 +69,15 @@
     display: grid;
     grid-template-columns: 540px 1fr;
     gap: 20px;
+    @include for-big {
+      gap: 2rem;
+      grid-template-columns: 54rem 1fr;
+    }
     &:not(:last-child) {
       margin-bottom: 30px;
+      @include for-big {
+        margin-bottom: 3rem;
+      }
     }
     @media (max-width: 1200px) {
       grid-template-columns: 1fr;
@@ -74,6 +99,9 @@
     overflow: hidden;
 
     position: relative;
+    @include for-big {
+      border-radius: 2rem;
+    }
     @media (max-width: 1200px) {
       height: 550px;
     }
@@ -107,6 +135,10 @@
     background: rgba(47, 122, 246, 0.6);
     border-radius: 20px;
     text-align: center;
+    @include for-big {
+      padding: 3rem 2.5rem;
+      border-radius: 2rem;
+    }
     @include tablet {
       padding: 20px;
     }
@@ -121,7 +153,10 @@
       font-size: 30px;
       text-align: center;
       color: #fff;
-
+      @include for-big {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
       @include tablet {
         font-size: 24px;
         margin-bottom: 10px;

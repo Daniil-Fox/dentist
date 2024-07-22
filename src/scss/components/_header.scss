@@ -11,13 +11,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include for-big {
+      padding: 2rem var(--container-offset);
+    }
   }
   &__nav {
     border-radius: 10px;
     padding: 20px;
     position: relative;
     background-color: #fff;
-
+    @include for-big {
+      padding: 2rem;
+      border-radius: 1rem;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -44,6 +51,10 @@
     border: 1px solid var(--accent);
     border-radius: 5px;
     position: relative;
+    @include for-big {
+      width: 5rem;
+      height: 5rem;
+    }
     @media (max-width: 1150px) {
       display: flex;
     }
@@ -93,6 +104,10 @@
     display: block;
     width: 200px;
     height: 42px;
+    @include for-big {
+      width: 20rem;
+      height: 4.2rem;
+    }
     @include tablet {
       width: 150px;
       height: 32px;
@@ -114,6 +129,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include for-big {
+      height: 6.2rem;
+    }
     @media (max-width: 1200px) {
       height: 50px;
     }
@@ -130,7 +148,11 @@
     border-radius: 10px;
     background-color: var(--accent);
     padding: 13.5px;
-
+    @include for-big {
+      width: 6.2rem;
+      height: 6.2rem;
+      border-radius: 1rem;
+    }
     @include tablet {
       width: 50px;
       height: 50px;

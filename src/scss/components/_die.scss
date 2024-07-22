@@ -1,6 +1,9 @@
 .die {
   margin: 20px 0;
   position: relative;
+  @include for-big {
+    margin: 2rem 0;
+  }
   @include small-tablet {
     padding-top: 40px;
   }
@@ -13,6 +16,10 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    @include for-big {
+      padding: 2rem;
+      border-radius: 2rem;
+    }
     @include tablet {
       gap: 20px;
     }
@@ -41,6 +48,9 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    @include for-big {
+      gap: 2rem;
+    }
     @include small-tablet {
       gap: 10px;
     }
@@ -55,6 +65,9 @@
   &__icon {
     width: 19px;
     flex-shrink: 0;
+    @include for-big {
+      width: 2rem;
+    }
     svg {
       width: 100%;
     }
@@ -62,12 +75,17 @@
   &__form {
     border: 1px solid rgba(47, 122, 246, 0.5);
     border-radius: 10px;
+    @include for-big {
+      border-radius: 1rem;
+    }
   }
   &__val {
     font-weight: 400;
     font-size: 20px;
     color: var(--text-color);
-
+    @include for-big {
+      font-size: 2rem;
+    }
     @include tablet {
       font-size: 16px;
     }

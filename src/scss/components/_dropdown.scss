@@ -9,7 +9,7 @@
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
   will-change: max-height;
-  &__item {
+  & > li {
     padding: 10px 20px;
     background-color: var(--accent);
     &:not(:last-child) {

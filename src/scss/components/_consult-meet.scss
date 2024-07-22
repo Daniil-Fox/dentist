@@ -1,5 +1,8 @@
 .consult-meet {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
@@ -9,7 +12,10 @@
     box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
     background: #fff;
     padding: 30px;
-
+    @include for-big {
+      padding: 3rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       padding: 20px;
       border-radius: 10px;
@@ -21,6 +27,9 @@
 
   &__capture {
     margin-bottom: 20px;
+    @include for-big {
+      margin-bottom: 2rem;
+    }
     @include mobile {
       margin-bottom: 10px;
     }
@@ -34,6 +43,9 @@
 
   &__desc {
     margin-bottom: 40px;
+    @include for-big {
+      margin-bottom: 4rem;
+    }
     @include small-tablet {
       margin-bottom: 20px;
     }
@@ -49,7 +61,11 @@
     background: linear-gradient(135deg, #e9f2fd 0%, #f9f1ee 100%);
     border: 1px solid var(--seraya-obvodka);
     border-radius: 20px;
-
+    @include for-big {
+      gap: 3rem;
+      padding: 3rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       padding: 20px;
       border-radius: 10px;
@@ -61,6 +77,9 @@
   &__icon {
     flex-shrink: 0;
     width: 65px;
+    @include for-big {
+      width: 6.5rem;
+    }
     @include small-tablet {
       width: 55px;
     }

@@ -9,7 +9,12 @@
   box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
   background: #fff;
   width: auto;
-
+  @include for-big {
+    margin-bottom: 3rem;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+  }
   @include small-tablet {
     gap: 10px;
     padding: 10px;
@@ -25,7 +30,9 @@
     line-height: 1;
     padding-left: 10px;
     font-family: var(--third-family);
-
+    @include for-big {
+      padding-left: 1rem;
+    }
     @include small-tablet {
       padding-left: 5px;
     }
@@ -34,7 +41,10 @@
   &__icon {
     width: 69px;
     height: 27px;
-
+    @include for-big {
+      width: 7rem;
+      height: 2.7rem;
+    }
     svg {
       width: 100%;
       height: 100%;
@@ -52,7 +62,9 @@
   align-items: center;
   font-size: 27px;
   line-height: 0.75;
-
+  @include for-big {
+    font-size: 2.7rem;
+  }
   @include small-tablet {
     font-size: 14px;
   }

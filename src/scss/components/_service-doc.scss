@@ -1,12 +1,18 @@
 .service-doc {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
   &__capture {
     font-size: 20px;
     margin-bottom: 10px;
-
+    @include for-big {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
     @include tablet {
       font-size: 16px;
     }
@@ -24,13 +30,19 @@
     border-radius: 20px;
 
     margin-bottom: 30px;
-
+    @include for-big {
+      margin-bottom: 3rem;
+      padding: 2rem;
+    }
     @include small-tablet {
       margin-bottom: 20px;
     }
   }
   &__text {
     margin-bottom: 10px;
+    @include for-big {
+      margin-bottom: 1rem;
+    }
   }
 
   &__item {
@@ -39,9 +51,15 @@
     background: #fff;
     border: 1px solid var(--seraya-obvodka);
     border-radius: 20px;
-
+    @include for-big {
+      padding: 2rem;
+      border-radius: 2rem;
+    }
     &:not(:last-child) {
       margin-bottom: 10px;
+      @include for-big {
+        margin-bottom: 1rem;
+      }
     }
   }
 }

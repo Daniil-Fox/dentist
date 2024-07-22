@@ -3,6 +3,10 @@
     background-color: #e9f2fd;
     border-radius: 20px;
     padding: 20px;
+    @include for-big {
+      padding: 2rem;
+      border-radius: 2rem;
+    }
     @media (max-width: 1400px) {
       padding: 10px;
       border-radius: 10px;
@@ -16,7 +20,10 @@
     background: linear-gradient(225deg, #fff 0%, #f9ffff 100%);
     border-radius: 10px;
     padding: 20px;
-
+    @include for-big {
+      border-radius: 1rem;
+      padding: 2rem;
+    }
     @media (max-width: 1400px) {
       padding: 10px;
     }
@@ -28,6 +35,9 @@
     font-size: 18px;
     color: var(--light-grey);
     line-height: 144%;
+    @include for-big {
+      font-size: 1.8rem;
+    }
     @media (max-width: 1400px) {
       font-size: 16px;
     }
@@ -39,14 +49,19 @@
     font-size: 20px;
     margin-bottom: 5px;
     color: var(--accent);
-
+    @include for-big {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
     @media (max-width: 1400px) {
       font-size: 17px;
     }
   }
   &__desc {
     margin-bottom: 20px !important;
-
+    @include for-big {
+      margin-bottom: 2rem !important;
+    }
     @include mobile {
       margin-bottom: 10px !important;
     }
@@ -57,6 +72,9 @@
   &__info {
     &:not(:last-child) {
       margin-bottom: 20px;
+      @include for-big {
+        margin-bottom: 2rem;
+      }
     }
   }
   &__btn {
@@ -75,6 +93,11 @@
     font-size: 25px;
     color: #fff;
     padding: 20px;
+    @include for-big {
+      padding: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
     @media (max-width: 1300px) {
       font-size: 22px;
       margin-bottom: 15px;
@@ -87,7 +110,9 @@
       display: flex;
       align-items: center;
       gap: 20px;
-
+      @include for-big {
+        gap: 2rem;
+      }
       svg {
         width: 26px;
         height: 28px;
@@ -108,7 +133,9 @@
     &.active {
       color: var(--accent);
     }
-
+    @include for-big {
+      font-size: 1.8rem;
+    }
     @media (max-width: 1400px) {
       font-size: 16px;
     }
@@ -119,6 +146,10 @@
   &__ch {
     &:not(:last-child) {
       margin-bottom: 10px;
+
+      @include for-big {
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -127,9 +158,14 @@
     font-size: 18px;
     text-align: center;
     color: var(--accent);
-
+    @include for-big {
+      font-size: 1.8rem;
+    }
     &:not(:last-child) {
       margin-bottom: 20px;
+      @include for-big {
+        margin-bottom: 2rem;
+      }
     }
   }
   &__btn {
@@ -142,16 +178,27 @@
     font-weight: 400;
     font-size: 18px;
     color: #bdbdbd;
+
+    @include for-big {
+      font-size: 1.8rem;
+    }
   }
   &__item {
     margin-top: 15px;
+
+    @include for-big {
+      margin-top: 1.5rem;
+    }
   }
 }
 .aside-item {
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
-
+  @include for-big {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
   &.active {
     .aside-item__icon {
       transform: rotate(90deg);
@@ -162,17 +209,28 @@
     width: 8px;
     height: 12px;
     transition: transform 0.3s ease-out;
+
+    @include for-big {
+      width: 0.8rem;
+      height: 1.2rem;
+    }
   }
   &__header {
     display: flex;
     align-items: center;
     gap: 15px;
-
+    @include for-big {
+      gap: 1.5rem;
+    }
     a {
       font-family: var(--font-family);
       font-weight: 400;
       font-size: 18px;
       color: #444;
+
+      @include for-big {
+        font-size: 1.8rem;
+      }
     }
   }
 
@@ -193,6 +251,12 @@
     overflow: hidden;
 
     margin-bottom: 20px;
+
+    @include for-big {
+      height: 22rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -213,6 +277,12 @@
     padding: 10px 15px;
     backdrop-filter: blur(4px);
     background: rgba(255, 255, 255, 0.8);
+
+    @include for-big {
+      font-size: 1.8rem;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+    }
   }
 
   &__link {
@@ -221,7 +291,12 @@
     top: 10px;
     width: 38px;
     height: 38px;
-
+    @include for-big {
+      right: 1rem;
+      top: 1rem;
+      width: 3.8rem;
+      height: 3.8rem;
+    }
     svg {
       width: 100%;
       height: 100%;

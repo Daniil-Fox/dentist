@@ -1,11 +1,17 @@
 .about-descr {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
   &__title {
     margin-bottom: 35px;
     font-family: var(--third-family);
+    @include for-big {
+      margin-bottom: 3.5rem;
+    }
 
     @include small-tablet {
       margin-bottom: 20px;
@@ -14,7 +20,9 @@
   &__desc {
     &:not(:last-child) {
       margin-bottom: 20px;
-
+      @include for-big {
+        margin-bottom: 2rem;
+      }
       @include mobile {
         margin-bottom: 10px;
       }
@@ -23,6 +31,9 @@
       margin-top: 10px;
       display: block;
       font-weight: 600;
+      @include for-big {
+        margin-top: 1rem;
+      }
     }
   }
   &__items {

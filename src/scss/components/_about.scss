@@ -1,5 +1,8 @@
 .about {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
@@ -7,7 +10,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-
+    @include for-big {
+      gap: 2rem;
+    }
     @include small-tablet {
       display: flex;
       flex-direction: column-reverse;
@@ -20,7 +25,10 @@
     padding: 20px;
     box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
     background: #fff;
-
+    @include for-big {
+      padding: 2rem;
+      border-radius: 2rem;
+    }
     &:not(:last-child) {
       margin-bottom: 17px;
 
@@ -34,7 +42,9 @@
     box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
     background: var(--seraya-obvodka);
     border-radius: 20px;
-
+    @include for-big {
+      border-radius: 2rem;
+    }
     @include small-tablet {
       height: 420px;
     }

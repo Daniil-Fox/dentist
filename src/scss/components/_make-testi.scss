@@ -1,5 +1,8 @@
 .make-testi {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
@@ -8,10 +11,17 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 24px;
+    @include for-big {
+      margin-bottom: 2.4rem;
+      gap: 1rem;
+    }
     svg {
       width: 32px;
       height: 32px;
-
+      @include for-big {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
       @include small-tablet {
         width: 24px;
         height: 24px;
@@ -52,7 +62,15 @@
     &:focus {
       outline: none;
     }
-
+    @include for-big {
+      margin-bottom: 2rem;
+      height: 19rem;
+      border-radius: 2rem;
+      padding-left: 7rem;
+      background-size: 2.3rem;
+      background-position: 3rem 3rem;
+      font-size: 2rem;
+    }
     @include small-tablet {
       padding: 20px;
       padding-left: 60px;

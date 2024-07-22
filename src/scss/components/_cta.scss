@@ -1,5 +1,8 @@
 .cta {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
@@ -11,7 +14,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-
+    @include for-big {
+      gap: 2rem;
+    }
     @include small-tablet {
       display: flex;
       flex-direction: column-reverse;
@@ -21,13 +26,18 @@
   &__form {
     .form__input {
       height: 92px;
-
+      @include for-big {
+        height: 9.2rem;
+      }
       @include small-tablet {
         height: 50px;
       }
     }
     .form__area {
       height: 180px;
+      @include for-big {
+        height: 18rem;
+      }
       @include small-tablet {
         height: 120px;
       }
@@ -40,6 +50,9 @@
   &__image {
     border-radius: 20px;
     overflow: hidden;
+    @include for-big {
+      border-radius: 2rem;
+    }
     @include small-tablet {
       height: 320px;
     }

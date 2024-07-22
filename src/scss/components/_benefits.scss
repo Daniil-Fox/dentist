@@ -1,5 +1,8 @@
 .benefits {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
@@ -25,7 +28,11 @@
       rgba(233, 242, 253, 0.4) 0%,
       rgba(249, 241, 238, 0.4) 100%
     );
-
+    @include for-big {
+      padding: 3rem;
+      min-height: 58rem;
+      border-radius: 2rem;
+    }
     @include small-tablet {
       min-height: unset;
       padding: 20px;
@@ -37,6 +44,12 @@
     margin-bottom: 20px;
     overflow: hidden;
     border-radius: 15px;
+
+    @include for-big {
+      height: 28rem;
+      margin-bottom: 2rem;
+      border-radius: 1.5rem;
+    }
     @include small-tablet {
       height: 220px;
     }
@@ -51,5 +64,8 @@
 
   &__capture {
     margin-bottom: 13px;
+    @include for-big {
+      margin-bottom: 1.3rem;
+    }
   }
 }

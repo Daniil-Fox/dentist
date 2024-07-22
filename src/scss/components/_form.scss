@@ -5,11 +5,16 @@
     width: 100%;
     &:not(:last-child) {
       margin-bottom: 10px;
+      @include for-big {
+        margin-bottom: 1rem;
+      }
     }
 
     &:last-of-type {
       margin-bottom: 30px;
-
+      @include for-big {
+        margin-bottom: 3rem;
+      }
       @include small-tablet {
         margin-bottom: 20px;
       }
@@ -23,7 +28,11 @@
     border: 2px solid var(--seraya-obvodka);
     border-radius: 20px;
     padding: 20px;
-
+    @include for-big {
+      height: 8rem;
+      padding: 2rem;
+      border-radius: 2rem;
+    }
     @include tablet {
       padding: 15px;
       height: 65px;
@@ -45,7 +54,9 @@
     font-size: 18px;
     line-height: 1;
     color: var(--text-color);
-
+    @include for-big {
+      font-size: 1.8rem;
+    }
     @include tablet {
       font-size: 16px;
     }
@@ -65,7 +76,9 @@
 
     overflow-y: auto;
     scrollbar-width: thin;
-
+    @include for-big {
+      height: 15.5rem;
+    }
     @include tablet {
       padding: 15px;
     }
@@ -84,5 +97,9 @@
   &__btn {
     width: 100%;
     max-width: 375px;
+
+    @include for-big {
+      max-width: 37.5rem;
+    }
   }
 }

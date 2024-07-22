@@ -2,7 +2,9 @@
   &__container {
     display: flex;
     gap: 20px;
-
+    @include for-big {
+      gap: 2rem;
+    }
     @media (max-width: 850px) {
       flex-direction: column;
       align-items: flex-start;
@@ -17,7 +19,11 @@
     border-radius: 40px;
     box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.1);
     background: linear-gradient(135deg, #e9f2fd 0%, #f9f1ee 100%);
-
+    @include for-big {
+      max-width: 76.2rem;
+      padding: 4rem;
+      border-radius: 4rem;
+    }
     @media (max-width: 850px) {
       padding: 20px;
       border-radius: 20px;
@@ -27,6 +33,10 @@
     flex-grow: 1;
     border-radius: 40px;
     flex-basis: 538px;
+    @include for-big {
+      flex-basis: 53.8rem;
+      border-radius: 4rem;
+    }
     img {
       display: block;
       width: 100%;
@@ -48,6 +58,9 @@
   }
   &__title {
     margin-bottom: 40px;
+    @include for-big {
+      margin-bottom: 4rem;
+    }
     @include tablet {
       margin-bottom: 30px;
     }
@@ -58,7 +71,9 @@
   &__desc {
     text-align: left;
     margin-bottom: 60px;
-
+    @include for-big {
+      margin-bottom: 6rem;
+    }
     @include tablet {
       margin-bottom: 40px;
     }

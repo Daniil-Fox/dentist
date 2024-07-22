@@ -1,12 +1,16 @@
 .near-theme {
   padding: 40px 0;
-
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
   &__capture {
     margin-bottom: 20px;
-
+    @include for-big {
+      margin-bottom: 2rem;
+    }
     @include small-tablet {
       margin-bottom: 10px;
     }
@@ -20,12 +24,17 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    @include for-big {
+      gap: 1.2rem;
+    }
     @include mobile {
       gap: 10px;
     }
     &:not(:last-child) {
       margin-bottom: 20px;
-
+      @include for-big {
+        margin-bottom: 2rem;
+      }
       @include mobile {
         margin-bottom: 10px;
       }
@@ -42,7 +51,10 @@
       padding: 0 8px;
       aspect-ratio: 1 / 1;
       border-radius: 100%;
-
+      @include for-big {
+        font-size: 2rem;
+        padding: 0 0.8rem;
+      }
       @include small-tablet {
         font-size: 18px;
       }
@@ -67,7 +79,9 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: var(--accent) !important;
-
+    @include for-big {
+      font-size: 2rem;
+    }
     @include small-tablet {
       font-size: 16px;
     }

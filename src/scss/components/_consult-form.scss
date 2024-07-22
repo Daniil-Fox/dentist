@@ -2,19 +2,36 @@
   padding: 20px;
   border-radius: 10px;
   background: linear-gradient(135deg, #e9f2fd 0%, #f9f1ee 100%);
+  @include for-big {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
   &__desc {
     margin-bottom: 10px;
+    @include for-big {
+      margin-bottom: 1rem;
+    }
   }
   &__input {
     height: 62px;
+    @include for-big {
+      height: 6.2rem;
+    }
   }
   &__label {
     &:last-of-type {
       margin-bottom: 20px;
+      @include for-big {
+        margin-bottom: 2rem;
+      }
     }
   }
   &__btn {
     width: 200px;
     padding: 15px 50px;
+    @include for-big {
+      width: 20rem;
+      padding: 1.5rem 5rem;
+    }
   }
 }

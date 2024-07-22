@@ -4,7 +4,11 @@
   box-sizing: border-box;
 }
 html {
-  font-size: calc(100vw / 144);
+  font-size: calc(100vw / 192);
+
+  @media (max-width: 1440px) {
+    font-size: calc(100vw / 144);
+  }
 }
 .page {
   height: 100%;
@@ -116,6 +120,11 @@ a {
   @include hover {
     background-color: rgb(77 161 255);
   }
+  @include for-big {
+    font-size: 1.6rem;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+  }
   @include tablet {
     padding: 18px 25px;
   }
@@ -145,6 +154,10 @@ a {
   font-size: 25px;
   color: var(--text-color);
   line-height: 1.44;
+
+  @include for-big {
+    font-size: 2.5rem;
+  }
   @include tablet {
     font-size: 20px;
   }
@@ -165,6 +178,9 @@ a {
   a {
     color: var(--accent);
     text-decoration: underline;
+  }
+  @include for-big {
+    font-size: 2rem;
   }
   @include tablet {
     font-size: 16px;
@@ -187,6 +203,9 @@ a {
   &--th {
     font-family: var(--third-family);
   }
+  @include for-big {
+    font-size: 2.5rem;
+  }
   @include tablet {
     font-size: 22px;
   }
@@ -204,7 +223,10 @@ a {
   font-weight: 500;
   font-size: 55px;
   color: var(--text-color);
-
+  @include for-big {
+    font-size: 5.5rem;
+    margin-bottom: 3rem;
+  }
   @include tablet {
     font-size: 40px;
   }
@@ -222,7 +244,9 @@ a {
   display: flex;
   align-items: center;
   gap: 20px;
-
+  @include for-big {
+    gap: 2rem;
+  }
   &__btn {
     width: 82px;
     height: 82px;
@@ -238,6 +262,10 @@ a {
         width: 14px;
         height: 23px;
       }
+    }
+    @include for-big {
+      width: 8.2rem;
+      height: 8.2rem;
     }
     @include tablet {
       width: 65px;
@@ -272,9 +300,18 @@ a {
 
   position: relative;
   transform: translate(-50%, -50%);
+
+  @include for-big {
+    width: 6rem;
+    height: 6rem;
+  }
 }
 .ymaps3x0--marker {
   width: 60px;
+
+  @include for-big {
+    width: 6rem;
+  }
 }
 
 .d-list {
@@ -301,7 +338,10 @@ a {
       background-position: center bottom;
       background-size: contain;
       background-repeat: no-repeat;
-
+      @include for-big {
+        width: 2.6rem;
+        height: 2.7rem;
+      }
       @include small-tablet {
         width: 22px;
         height: 23px;
@@ -317,7 +357,9 @@ a {
       text-decoration: underline;
       text-decoration-skip-ink: none;
     }
-
+    @include for-big {
+      font-size: 2rem;
+    }
     @include small-tablet {
       font-size: 16px;
     }
@@ -345,6 +387,9 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
+  @include for-big {
+    gap: 2rem;
+  }
   @media (max-width: 1024px) {
     display: block;
   }

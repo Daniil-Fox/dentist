@@ -1,5 +1,8 @@
 .footer {
   padding: 40px 0;
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
@@ -11,13 +14,19 @@
     gap: 20px 0;
     padding-bottom: 30px;
     border-bottom: 1px solid #444;
-
+    @include for-big {
+      gap: 2rem 0;
+      padding-bottom: 3rem;
+    }
     @include mobile {
       padding-bottom: 10px;
     }
   }
   &__bottom {
     padding-top: 20px;
+    @include for-big {
+      padding-bottom: 2rem;
+    }
     @include mobile {
       padding-top: 10px;
     }
@@ -31,7 +40,10 @@
     font-size: 16px;
     line-height: 162%;
     color: #444;
-
+    @include for-big {
+      font-size: 1.6rem;
+      max-width: 62rem;
+    }
     @include small-tablet {
       font-size: 12px;
       line-height: 150%;
@@ -45,6 +57,10 @@
     width: 100%;
     max-width: 540px;
     margin-right: 80px;
+    @include for-big {
+      max-width: 54rem;
+      margin-right: 8rem;
+    }
   }
 
   &__logo {
@@ -52,6 +68,11 @@
     width: 270px;
     height: 56px;
     margin-bottom: 30px;
+    @include for-big {
+      width: 27rem;
+      height: 5.6rem;
+      margin-bottom: 3rem;
+    }
     @include small-tablet {
       width: 220px;
       height: 48px;
@@ -74,7 +95,9 @@
     font-size: 16px;
     line-height: 162%;
     color: var(--text-color);
-
+    @include for-big {
+      font-size: 1.6rem;
+    }
     @include mobile {
       display: none;
     }
@@ -84,7 +107,9 @@
     width: 100%;
     max-width: 380px;
     flex-shrink: 0;
-
+    @include for-big {
+      max-width: 38rem;
+    }
     @include mobile {
       width: 100%;
       max-width: 48%;
@@ -96,6 +121,9 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    @include for-big {
+      gap: 2rem;
+    }
     @include mobile {
       gap: 10px;
     }
@@ -115,6 +143,10 @@
     display: block;
     width: 40px;
     height: 40px;
+    @include for-big {
+      width: 4rem;
+      height: 4rem;
+    }
     svg,
     img {
       width: 100%;
@@ -135,7 +167,9 @@
     font-size: 16px;
     line-height: 162%;
     color: var(--text-color);
-
+    @include for-big {
+      font-size: 1.6rem;
+    }
     @include small-tablet {
       font-size: 14px;
     }
@@ -147,6 +181,9 @@
   &__icon {
     width: 19px;
     flex-shrink: 0;
+    @include for-big {
+      width: 1.9rem;
+    }
     svg {
       width: 100%;
     }
@@ -163,7 +200,10 @@
     font-size: 18px;
     line-height: 144%;
     color: var(--text-color);
-
+    @include for-big {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
     @include small-tablet {
       font-size: 16px;
     }
@@ -174,7 +214,9 @@
   &__soc {
     width: 100%;
     max-width: 280px;
-
+    @include for-big {
+      max-width: 28rem;
+    }
     @include mobile {
       width: auto;
       max-width: 100%;
@@ -189,7 +231,9 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: var(--accent);
-
+    @include for-big {
+      font-size: 1.8rem;
+    }
     @include small-tablet {
       font-size: 14px;
     }

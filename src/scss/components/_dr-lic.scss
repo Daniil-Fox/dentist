@@ -1,12 +1,17 @@
 .dr-lic {
   padding: 40px 0;
-
+  @include for-big {
+    padding: 4rem 0;
+  }
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
     height: 1183px;
-
+    @include for-big {
+      height: 118.3rem;
+      gap: 2rem;
+    }
     @include tablet {
       height: 60vh;
     }

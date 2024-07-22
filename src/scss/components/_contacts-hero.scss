@@ -1,6 +1,9 @@
 .contacts-hero {
   padding: 0;
   margin-bottom: 40px;
+  @include for-big {
+    margin-bottom: 4rem;
+  }
   @include small-tablet {
     margin-bottom: 20px;
   }
@@ -11,7 +14,11 @@
     border-radius: 40px;
     display: flex;
     gap: 20px;
-
+    @include for-big {
+      padding: 4rem;
+      border-radius: 4rem;
+      gap: 2rem;
+    }
     @include small-tablet {
       border-radius: 20px;
       padding: 30px 20px;
@@ -23,7 +30,9 @@
   &__form {
     width: 100%;
     max-width: 518px;
-
+    @include for-big {
+      max-width: 51.8rem;
+    }
     @include small-tablet {
       max-width: 100%;
     }
@@ -32,7 +41,10 @@
     border-radius: 0 30px;
     overflow: hidden;
     flex-basis: 367px;
-
+    @include for-big {
+      flex-basis: 36.7rem;
+      border-radius: 0 3rem;
+    }
     @include small-tablet {
       flex-basis: auto;
       max-height: 350px;

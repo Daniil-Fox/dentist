@@ -1,5 +1,8 @@
 .nearest-sub {
   margin-bottom: 40px;
+  @include for-big {
+    margin-bottom: 4rem;
+  }
   @include small-tablet {
     margin-bottom: 20px;
   }

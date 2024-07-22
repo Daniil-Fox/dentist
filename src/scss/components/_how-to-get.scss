@@ -1,6 +1,8 @@
 .how-to-get {
   padding: 40px 0;
-
+  @include for-big {
+    padding: 4rem 0;
+  }
   @include small-tablet {
     padding: 20px 0;
   }
