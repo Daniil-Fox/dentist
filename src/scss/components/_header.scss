@@ -67,6 +67,11 @@
       height: 2px;
       border-radius: 2px;
       background-color: var(--accent);
+      @include for-big {
+        width: 3rem;
+        height: 0.2rem;
+        border-radius: 0.2rem;
+      }
       @include small-tablet {
         width: 17px;
       }
@@ -79,6 +84,11 @@
         height: 2px;
         background-color: var(--accent);
         border-radius: 2px;
+        @include for-big {
+          left: 0.9rem;
+          width: 3rem;
+          height: 0.2rem;
+        }
         @include small-tablet {
           width: 17px;
           left: 7px;
@@ -86,14 +96,18 @@
       }
       &::before {
         top: 15px;
-
+        @include for-big {
+          top: 1.5rem;
+        }
         @include small-tablet {
           top: 8px;
         }
       }
       &::after {
         bottom: 15px;
-
+        @include for-big {
+          bottom: 1.5rem;
+        }
         @include small-tablet {
           bottom: 8px;
         }

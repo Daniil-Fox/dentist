@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 html {
-  font-size: calc(100vw / 192);
-
   @media (max-width: 1440px) {
     font-size: calc(100vw / 144);
   }
